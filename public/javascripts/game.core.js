@@ -71,6 +71,7 @@ function Player(my_name){
     this.cards = [];
     this.points = 0;  //point is for this game
     this.score = 0;   //score is for the whole game
+    this.declarer = -1;  // 0 is false, 1 is true, -1 is undefined.
 
 }
 function shuffle(array) {
@@ -92,7 +93,7 @@ function shuffle(array) {
 }
 
 function Deck(){
-    deck = [];
+    var deck = [];
 
     for(var i = 0; i <DECK_NUM; i++ ){
         for ( var j = 0 ; j< SUIT_NUM; j++){
@@ -107,22 +108,24 @@ function Deck(){
     shuffle(deck);
     return deck;
 }
-function gameInfo(){
-    declarers = 0; // I would like set number 23 as player 2 and 3.
-    dealers = 0;   // number 13 as player 1 and 3.
+function GameInfo(){
+    this.dominantSuit = 'unknown';
+    this.dominantRank = 2;
+    this.starter = -1; //should be one of player 0 to 3
 
 }
-function Dealing(players){
+
+function Dealing(players,gameInfo){
     var deck= Deck();
     //console.log(deck);
     //console.log(deck.length);
     var n = deck.length;
-    var i = 0;
+    var i = gameInfo.starter;
     while(n > 0){
         n = n-1;
         i = i%4;
         players[i].cards.push(deck[n]);
-        //determining the dominant suit and rank
+        //TODO: determining the dominant suit and rank
         i = i +1;
     }
 //    for(var j = 0 ; j<4; j++){
@@ -130,6 +133,7 @@ function Dealing(players){
 //    }
 }
 function playing(players){
+    console.log('OK. please start your trick');
 
 }
 
@@ -138,8 +142,8 @@ function updateScore(players){
 }
 
 
-function One_game(players){
-    Dealing(players);
+function One_game(players,gameInfo){
+    Dealing(players,gameInfo);
     playing(players);
     updateScore(players);
 }
@@ -159,7 +163,9 @@ for(var i = 0 ; i< 4; i++){
     players[i] = new Player('player '+i)
 }
 console.log(players)
-One_game(players);
+var gameInfo = new GameInfo();
+gameInfo.starter = 1;
+One_game(players,gameInfo);
 
 //var game_core = function(game_instance){
 //
