@@ -67,8 +67,10 @@ function This_round(){
 
 }
 function Player(my_name){
-    player.name = my_name;
-    player.cards = [];
+    this.name = my_name;
+    this.cards = [];
+    this.points = 0;  //point is for this game
+    this.score = 0;   //score is for the whole game
 
 }
 function shuffle(array) {
@@ -105,19 +107,44 @@ function Deck(){
     shuffle(deck);
     return deck;
 }
-
-function Show(cards){
+function gameInfo(){
+    declarers = 0; // I would like set number 23 as player 2 and 3.
+    dealers = 0;   // number 13 as player 1 and 3.
 
 }
-
-function Dealing(player_one , player_two){
+function Dealing(players){
     var deck= Deck();
-    console.log(deck);
-    console.log(deck.length);
+    //console.log(deck);
+    //console.log(deck.length);
+    var n = deck.length;
+    var i = 0;
+    while(n > 0){
+        n = n-1;
+        i = i%4;
+        players[i].cards.push(deck[n]);
+        //determining the dominant suit and rank
+        i = i +1;
+    }
+//    for(var j = 0 ; j<4; j++){
+//        console.log(players[j].cards.length)
+//    }
 }
-function One_game(){
+function playing(players){
 
-};
+}
+
+function updateScore(players){
+
+}
+
+
+function One_game(players){
+    Dealing(players);
+    playing(players);
+    updateScore(players);
+}
+
+
 var game_core= function (game_instance) {
     //Store the instance, if any
     this.instance = game_instance;
@@ -127,8 +154,12 @@ var game_core= function (game_instance) {
 
 };
 
-
-Dealing(0,0);
+var players = [];
+for(var i = 0 ; i< 4; i++){
+    players[i] = new Player('player '+i)
+}
+console.log(players)
+One_game(players);
 
 //var game_core = function(game_instance){
 //
