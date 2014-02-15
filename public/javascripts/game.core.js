@@ -52,6 +52,8 @@
 //
 ///* The game_core class */
 //
+
+
 DECK_NUM = 2;
 SUIT_NUM = 4;
 VALUE_NUM = 13;
@@ -66,13 +68,13 @@ function Card(my_suit,my_value){
 function This_round(){
 
 }
-function Player(my_name){
-    this.name = my_name;
-    this.cards = [];
-    this.points = 0;  //point is for this game
-    this.score = 0;   //score is for the whole game
-    this.declarer = -1;  // 0 is false, 1 is true, -1 is undefined.
-
+function playerProperty(players){
+    for(var i = 0 ;i < players.length; i++){
+        players[i].cards = [];
+        players[i].points = 0;  //point is for this game
+        players[i].score = 0;   //score is for the whole game
+        players[i].declarer = -1;  // 0 is false, 1 is true, -1 is undefined.
+    }
 }
 function shuffle(array) {
     var m = array.length, t, i;
@@ -128,9 +130,9 @@ function Dealing(players,gameInfo){
         //TODO: determining the dominant suit and rank
         i = i +1;
     }
-//    for(var j = 0 ; j<4; j++){
-//        console.log(players[j].cards.length)
-//    }
+    for(var j = 0 ; j<4; j++){
+        console.log(players[j].cards.length)
+    }
 }
 function playing(players){
     console.log('OK. please start your trick');
@@ -152,20 +154,29 @@ function One_game(players,gameInfo){
 var game_core= function (game_instance) {
     //Store the instance, if any
     this.instance = game_instance;
+    //console.log(game_instance.id)
+    //console.log(game_instance);
     //Store a flag if we are the server
     this.server = this.instance !== undefined;
-
+    var players = [];
+    for(var i = 0 ; i< 3; i++){
+        players[i] = game_instance.player_client[i];
+    }
+    players[3]=game_instance.player_host;
+    playerProperty(players);
+    //console.log(players)
+    var gameInfo = new GameInfo();
+    gameInfo.starter = 1;
+    One_game(players,gameInfo);
 
 };
 
-var players = [];
-for(var i = 0 ; i< 4; i++){
-    players[i] = new Player('player '+i)
+
+//server side we set the 'game_core' class to a global type, so that it can use it anywhere.
+if( 'undefined' != typeof global ) {
+    module.exports = global.game_core = game_core;
 }
-console.log(players)
-var gameInfo = new GameInfo();
-gameInfo.starter = 1;
-One_game(players,gameInfo);
+
 
 //var game_core = function(game_instance){
 //
