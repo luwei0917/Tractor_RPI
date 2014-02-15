@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 20px Helvetica, "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+#gamestart {
+  height: 100px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #abcdef;
+}
+#gamestart p {
+  padding-top: 35px;
+  padding-left: 35px;
+  font-size: 20;
+  color: #ee82ee;
+}
+#welcomemsg {
+  display: none;
+}
