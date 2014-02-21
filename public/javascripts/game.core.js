@@ -107,12 +107,13 @@ function find(cards,target){
 }
 function deleteHand(player,result){
     console.log(result);
-    console.log(player.cards);
+    //console.log(player.cards);
     var index = find(player.cards,result);
     //delete player.cards[index];
     player.cards.splice(index,1);
+    console.log(player.cards);
     console.log(index);
-    console.log(player.cards.length);
+    console.log('length '+ player.cards.length);
 
 }
 function updateHand(player){

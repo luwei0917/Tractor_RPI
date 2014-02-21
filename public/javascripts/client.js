@@ -5,6 +5,7 @@ function connect_to_server ()
     socket = io.connect();
     socket.on('connect', function(){
         this.state = 'connecting';
+        mycards = new Array();
     });
 
     socket.on('uid', function(data){
@@ -35,12 +36,14 @@ function connect_to_server ()
             $('#servermsg').text(ccc);
         }
     })
+
+
     socket.on('updateHand', function(message) {
         console.log(message.length);
         console.log(message);
-        var ccc = '11111';
+        var ccc = 'Now Round';
         for(var i=0;i<message.length; i++){
-            ccc += (mycards[i].suit + ' '+ mycards[i].value + ' , ' )
+            ccc += (message[i].suit + ' '+ message[i].value + ' , ' )
         }
         $('#servermsg').text(ccc);
     })
