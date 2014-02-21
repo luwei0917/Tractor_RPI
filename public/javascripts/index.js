@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('#gamestart').click(function(){
         $('#gamestart').fadeOut('fast');
         connect_to_server();
-        });
+    });
 
     $('#button1').click(function() {
         send_msg ('button', 'button1');
@@ -13,21 +13,25 @@ $(document).ready(function(){
         $('#gamestart p').css('color','yellow');
         //$('this').fadeOut('slow')
     }).mouseleave(function() {
-        $('#gamestart p').css('color','violet');
-        //$('this').fadeOut('slow')
-    });
-    
+            $('#gamestart p').css('color','violet');
+            //$('this').fadeOut('slow')
+        });
+
     $('#inputbutton').click(function() {
-        send_msg ('input', $('#input1').val());
+        var res = $('#input1').val().split(' ');
+        var cd = {suit: res[0], value: res[1]};
+        send_msg ('usecard', cd);
         $('#input1').val('')
     })
     $('#input1').keypress(function(k) {
         if (k.which === 13)
         {
-             send_msg ('input', $('#input1').val());
+            var res = $('#input1').val().split(' ');
+            var cd = {suit: res[0], value: res[1]};
+            send_msg ('usecard', cd);
             $('#input1').val('')
         }
-        
+
     })
 
 })
