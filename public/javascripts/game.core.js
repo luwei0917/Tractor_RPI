@@ -18,6 +18,7 @@ function playerProperty(players){
         players[i].points = 0;  //point is for this game
         players[i].score = 0;   //score is for the whole game
         players[i].declarer = -1;  // 0 is false, 1 is true, -1 is undefined.
+        players[i].start = false;
     }
 }
 function shuffle(array) {
@@ -120,18 +121,29 @@ function updateHand(player){
     player.emit('updateHand', player.cards);
 }
 function one_round(players,gameInfo){
+
     players.forEach(function(player){
-        do_trick(player,gameInfo,function(result){
-            if(result){
-                var oneCard = new Card(result.suit,parseInt(result.value));
-                console.log('gamecore:: ' + player.userid + ' used card ' + result.suit + ' ' + result.value);
-                deleteHand(player,oneCard);
-                updateHand(player);
-            }
-            else{
-                console.log('no imput');
-            }
-        })
+        if(player.start === true){
+            player.broadcast.to(player.game).emit('stop' );
+            do_trick(player,gameInfo,function(result){
+                if(result){
+                    var oneCard = new Card(result.suit,parseInt(result.value));
+                    console.log('gamecore:: ' + player.userid + ' used card ' + result.suit + ' ' + result.value);
+                    deleteHand(player,oneCard);
+                    updateHand(player);
+                }
+                else{
+                    console.log('no imput');
+                }
+            })
+        }
+        else{
+
+            do_trick(player,gameInfo,function(result){
+
+            })
+        }
+
     })
     // do something
 
@@ -142,7 +154,14 @@ function one_round(players,gameInfo){
 function playing(players,gameInfo){
     console.log('OK. please start your trick');
     var done = false;
-
+    for(var i =0 ;i<players.length; i++){
+        if(i === gameInfo.starter){
+            players.start = true;
+        }
+        else{
+            players.start = false;
+        }
+    }
     one_round(players,gameInfo);
 
 

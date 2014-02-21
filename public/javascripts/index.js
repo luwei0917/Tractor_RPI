@@ -18,13 +18,20 @@ $(document).ready(function(){
         });
 
     $('#inputbutton').click(function() {
-        var res = $('#input1').val().split(' ');
-        var cd = {suit: res[0], value: res[1]};
-        send_msg ('usecard', cd);
-        $('#input1').val('')
+        if(myturn){
+            var res = $('#input1').val().split(' ');
+            var cd = {suit: res[0], value: res[1]};
+            send_msg ('usecard', cd);
+            $('#input1').val('')
+        }
+        else{
+            var cd = "Not you turn yet"
+            send_msg('usecard', cd)
+        }
     })
     $('#input1').keypress(function(k) {
-        if (k.which === 13)
+
+        if (k.which === 13 && myturn)
         {
             var res = $('#input1').val().split(' ');
             var cd = {suit: res[0], value: res[1]};

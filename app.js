@@ -85,6 +85,7 @@ io.sockets.on('connection', function (client) {
         client.emit(client);
     });
 
+
     client.on('nousenow', function(m) {
         console.log('recieved input ' + m + ' from ' +client.userid);
         io.sockets.in('lobby').emit('msg', m);

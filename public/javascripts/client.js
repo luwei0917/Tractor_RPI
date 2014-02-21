@@ -1,5 +1,5 @@
 var mycards = [];
-
+var myturn = false;
 function connect_to_server ()
 {
     socket = io.connect();
@@ -41,11 +41,19 @@ function connect_to_server ()
     socket.on('updateHand', function(message) {
         console.log(message.length);
         console.log(message);
-        var ccc = 'Now Round';
+        var ccc = 'Now Round  ';
         for(var i=0;i<message.length; i++){
             ccc += (message[i].suit + ' '+ message[i].value + ' , ' )
         }
         $('#servermsg').text(ccc);
+    })
+
+    socket.on('stop',function(){
+        myturn = false;
+    })
+
+    socket.on('go',function(){
+        myturn = true;
     })
 }
 
