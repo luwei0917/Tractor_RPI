@@ -182,53 +182,6 @@ function updateHand(player){
 
 
 
-//function one_round(players,gameInfo){
-//
-//    players.forEach(function(player){
-//        var my = setInterval(function(){
-//            if(player.mynum === gameInfo.tempPos){
-//                player.emit('go');
-//                player.broadcast.to(player.game).emit('stop' );
-//                do_trick(player,gameInfo,function(result){
-//                    if(result){
-//                        var oneCard = new Card(result.suit,parseInt(result.value));
-//                        console.log('gamecore:: ' + player.userid + ' used card ' + result.suit + ' ' + result.value);
-//                        //TODO: It should be possible to play more than one card
-//                        // Now I just made one value array;
-//                        var cardsCombination = [];
-//                        cardsCombination.push(oneCard);
-//                        var isLegal = deleteHand(player , cardsCombination);  // -1 means not legal
-//                        // if want he want to play is not legal. Tell him.
-//                        if (isLegal === -1){
-//                            //console.log('Im here');
-//                            player.emit('DoAgain');
-//                        }
-//                        else{
-//                            updateHand(player);
-//                            player.broadcast.to(player.game).emit('otherTricks',result);
-//                            player.emit('otherTricks',result);
-//                            //next
-//                            gameInfo.tempPos = ((player.mynum + 1)%4);
-//                            player.emit('stop');
-//                        }
-//                    }
-//                    else{
-//                        console.log('no imput');
-//                    }
-//                })
-//
-//                clearInterval(my);
-//            }
-//        },30)
-//
-//
-//    })
-//    // do something
-//
-//    //to next round
-//    //one_round(players,gameInfo);
-//}
-
 
 function do_trick(player, gameInfo, callback){
 
@@ -260,7 +213,6 @@ function do_trick(player, gameInfo, callback){
         }
     })
 }
-
 
 
 function countCardsinHand(player){
