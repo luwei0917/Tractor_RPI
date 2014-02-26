@@ -8,6 +8,7 @@ function connect_to_server ()
         mycards = new Array();
     });
 
+
     socket.on('uid', function(data){
         console.log(data);
         $('#welcomemsg').append('<p>hello user ' + data['hello'] + '</p>');
@@ -34,6 +35,7 @@ function connect_to_server ()
                 ccc += (mycards[i].suit + ' '+ mycards[i].value + ' , ' )
             }
             $('#servermsg').text(ccc);
+
         }
     })
 
@@ -41,19 +43,35 @@ function connect_to_server ()
     socket.on('updateHand', function(message) {
         console.log(message.length);
         console.log(message);
-        var ccc = 'Now Round  ';
+        var ccc = 'This Round  ';
         for(var i=0;i<message.length; i++){
             ccc += (message[i].suit + ' '+ message[i].value + ' , ' )
         }
         $('#servermsg').text(ccc);
     })
 
+    socket.on('otherTricks', function(message) {
+
+        $('#trick').append('<p>' +  message.suit+' '+ message.value +'</p>');
+    })
+
+    socket.on('initial', function() {
+        $('#welcomemsg').text(' ');
+        $('#trick').text(' ');
+    })
+    socket.on('DoAgain', function() {
+        $('#gogogo').text('Not legal, try again');
+        //$('trick').text('hahahaha');
+    })
+
     socket.on('stop',function(){
         myturn = false;
+        $('#gogogo').text('Not your turn');
     })
 
     socket.on('go',function(){
         myturn = true;
+        $('#gogogo').text('you can go');
     })
 }
 

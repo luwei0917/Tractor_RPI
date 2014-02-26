@@ -25,20 +25,23 @@ $(document).ready(function(){
             $('#input1').val('')
         }
         else{
-            var cd = "Not you turn yet"
-            send_msg('usecard', cd)
+            $('#gogogo').text('Not your turn yet, Do not panic');
         }
     })
     $('#input1').keypress(function(k) {
 
-        if (k.which === 13 && myturn)
+        if (k.which === 13)
         {
-            var res = $('#input1').val().split(' ');
-            var cd = {suit: res[0], value: res[1]};
-            send_msg ('usecard', cd);
-            $('#input1').val('')
+            if (myturn){
+                var res = $('#input1').val().split(' ');
+                var cd = {suit: res[0], value: res[1]};
+                send_msg ('usecard', cd);
+                $('#input1').val('')
+            }
+            else{
+                $('#gogogo').text('Not your turn yet, Do not panic');
+            }
         }
-
     })
 
 })
