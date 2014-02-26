@@ -99,13 +99,6 @@ function Dealing(players, gameInfo){
 }
 
 
-//function do_trick(player, gameInfo, callback){
-//    player.on('usecard', function(m) {
-//        callback(m);
-//    })
-//}
-
-
 function find(player,target){
     for(var i = 0; i< 5; i++){
         if(ALL_SUIT[i] === target.suit){
@@ -140,6 +133,8 @@ function sortCards(players){
     }
 
 }
+
+
 function deleteHand(player,cardsCombination){
     console.log(cardsCombination);
     //console.log(player.cards);
