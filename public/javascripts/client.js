@@ -73,7 +73,27 @@ function connect_to_server ()
         myturn = true;
         $('#gogogo').text('you can go');
     })
+
+    socket.on('dealer',function(){
+        myturn = true;
+        $('#position').text('you are dealer');
+    })
+    socket.on('defender',function(){
+        myturn = true;
+        $('#position').text('you are defender');
+    })
+    socket.on('attacker',function(){
+        myturn = true;
+        $('#position').text('you are attacker');
+    })
+    socket.on('declaration',function(){
+        myturn = true;
+        $('#position').append('    You can choose the dominant suit');
+    })
+
+
 }
+
 
 
 function send_msg(type, msg)

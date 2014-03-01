@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="2nd version&#10;">
+    <list default="true" id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/client.js" afterPath="$PROJECT_DIR$/public/javascripts/client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/game.core.js" afterPath="$PROJECT_DIR$/public/javascripts/game.core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tractor.iws" />
@@ -29,7 +31,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="442" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1500">
+            <state line="13" column="28" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1500">
               <folding />
             </state>
           </provider>
@@ -38,7 +40,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="554" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="780">
+            <state line="29" column="6" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
@@ -47,7 +49,7 @@
       <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="10" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="645">
+            <state line="25" column="12" selection-start="650" selection-end="650" vertical-scroll-proportion="-8.64" vertical-offset="159" max-vertical-offset="675">
               <folding />
             </state>
           </provider>
@@ -56,7 +58,7 @@
       <file leaf-file-name="client.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="26" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.0" vertical-offset="771" max-vertical-offset="1335">
+            <state line="83" column="6" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.0" vertical-offset="1019" max-vertical-offset="1635">
               <folding />
             </state>
           </provider>
@@ -65,7 +67,7 @@
       <file leaf-file-name="game.core.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="16" selection-start="6846" selection-end="6846" vertical-scroll-proportion="0.54022986" vertical-offset="3380" max-vertical-offset="6105">
+            <state line="280" column="0" selection-start="7991" selection-end="7991" vertical-scroll-proportion="0.3951613" vertical-offset="4004" max-vertical-offset="5565">
               <folding />
             </state>
           </provider>
@@ -112,18 +114,18 @@
         <option value="$PROJECT_DIR$/public/javascripts/game_core.js" />
         <option value="$PROJECT_DIR$/public/javascripts/game.server.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/client.js" />
         <option value="$PROJECT_DIR$/public/javascripts/test.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/client.js" />
         <option value="$PROJECT_DIR$/public/javascripts/game.core.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="720" />
+    <option name="x" value="4" />
     <option name="y" value="26" />
-    <option name="width" value="712" />
+    <option name="width" value="1428" />
     <option name="height" value="870" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -358,7 +360,11 @@
       <created>1393447082958</created>
       <updated>1393447082958</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="2nd version&#10;">
+      <created>1393639767931</created>
+      <updated>1393639767931</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -382,9 +388,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="26" width="712" height="870" extended-state="0" />
+    <frame x="4" y="26" width="1428" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -393,13 +400,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39717224" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5007236" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32692307" sideWeight="0.4992764" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32647815" sideWeight="0.4992764" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -730,20 +736,6 @@
         <state line="359" column="27" selection-start="7681" selection-end="7681" vertical-scroll-proportion="0.9716599" vertical-offset="4875" max-vertical-offset="8145" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="10" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="554" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="226" column="0" selection-start="6779" selection-end="6779" vertical-scroll-proportion="0.0" vertical-offset="2318" max-vertical-offset="2850">
@@ -758,23 +750,37 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="26" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.0" vertical-offset="771" max-vertical-offset="1335">
+        <state line="13" column="28" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="442" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1500">
+        <state line="29" column="6" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="12" selection-start="650" selection-end="650" vertical-scroll-proportion="-8.64" vertical-offset="159" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="6" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.0" vertical-offset="1019" max-vertical-offset="1635">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="16" selection-start="6846" selection-end="6846" vertical-scroll-proportion="0.54022986" vertical-offset="3380" max-vertical-offset="6105">
+        <state line="280" column="0" selection-start="7991" selection-end="7991" vertical-scroll-proportion="0.3951613" vertical-offset="4004" max-vertical-offset="5565">
           <folding />
         </state>
       </provider>
