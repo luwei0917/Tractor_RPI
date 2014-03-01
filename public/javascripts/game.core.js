@@ -176,8 +176,6 @@ function updateHand(player){
 }
 
 
-
-
 function do_trick(player, gameInfo, callback){
 
     player.on('usecard', function(result) {
@@ -191,9 +189,6 @@ function do_trick(player, gameInfo, callback){
         var isLegal = deleteHand(player , cardsCombination);  // -1 means not legal
         // if want he want to play is not legal. Tell him.
         if (isLegal === -1){
-            //debug(6);
-            //console.log('Im here');
-            debug(31);
             callback(-1);
         }
         else{
@@ -204,6 +199,7 @@ function do_trick(player, gameInfo, callback){
             //next
             gameInfo.starter = ((gameInfo.starter + 1)%4);
             player.emit('stop');
+            player.broadcast.to(player.game).emit('stop');
             callback(1);
         }
     })
@@ -217,27 +213,34 @@ function countCardsinHand(player){
     }
     return num;
 }
+
+
 function one_round(players,gameInfo, callBack){
     // set them all not able to submit information.
     console.log('one_round');
     if(gameInfo.count < 4){
         var i = gameInfo.starter;
-        debug(9);
+        //debug(9);
         do_trick(players[i],gameInfo,function(result){
-            debug(88);
+            //debug(88);
             if(result === 1){
-                debug(3);
+                //debug(3);
                 gameInfo.count++;
                 i = gameInfo.starter;
                 players[i].emit('go');
                 players[i].broadcast.to(players[i].game).emit('stop');
                 one_round(players,gameInfo ,callBack);
             }
-            else{
-                debug(11)
+            else if(result === -1){
+                //debug(11)
                 players[i].emit('DoAgain');
-                players[i].broadcast.to(players[i].game).emit('stop');
-                one_round(players,gameInfo ,callBack);
+                //players[i].broadcast.to(players[i].game).emit('stop');
+                //one_round(players,gameInfo ,callBack);
+            }
+            else{
+                debug(result);
+                debug(99);
+
             }
         })
     }
@@ -249,6 +252,87 @@ function one_round(players,gameInfo, callBack){
 
 }
 
+
+//
+//function do_trick(player, gameInfo, callback){
+//
+//    player.on('usecard', function(result) {
+//        debug(2);
+//        var oneCard = new Card(result.suit,parseInt(result.value));
+//        console.log('gamecore:: ' + player.userid + ' used card ' + result.suit + ' ' + result.value);
+//        //TODO: It should be possible to play more than one card
+//        // Now I just made one value array;
+//        var cardsCombination = [];
+//        cardsCombination.push(oneCard);
+//        var isLegal = deleteHand(player , cardsCombination);  // -1 means not legal
+//        // if want he want to play is not legal. Tell him.
+//        if (isLegal === -1){
+//            //debug(6);
+//            //console.log('Im here');
+//            debug(31);
+//            callback(-1);
+//        }
+//        else{
+//            debug(5);
+//            updateHand(player);
+//            player.broadcast.to(player.game).emit('otherTricks',result);
+//            player.emit('otherTricks',result);
+//            //next
+//            gameInfo.starter = ((gameInfo.starter + 1)%4);
+//            player.emit('stop');
+//            player.broadcast.to(player.game).emit('stop');
+//            callback(1);
+//        }
+//    })
+//}
+//
+//
+//function countCardsinHand(player){
+//    var num =0;
+//    for(var i =0;i<5;i++){
+//        num += player.suit[i].length;
+//    }
+//    return num;
+//}
+//
+//
+//function one_round(players,gameInfo, callBack){
+//    // set them all not able to submit information.
+//    console.log('one_round');
+//    if(gameInfo.count < 4){
+//        var i = gameInfo.starter;
+//        debug(9);
+//        do_trick(players[i],gameInfo,function(result){
+//            debug(88);
+//            if(result === 1){
+//                debug(3);
+//                gameInfo.count++;
+//                i = gameInfo.starter;
+//                players[i].emit('go');
+//                players[i].broadcast.to(players[i].game).emit('stop');
+//                one_round(players,gameInfo ,callBack);
+//            }
+//            else if(result === -1){
+//                debug(11)
+//                players[i].emit('DoAgain');
+//                //players[i].broadcast.to(players[i].game).emit('stop');
+//                one_round(players,gameInfo ,callBack);
+//            }
+//            else{
+//                debug(result);
+//                debug(99);
+//
+//            }
+//        })
+//    }
+//    else{
+//        console.log('One loop done');
+//        gameInfo.cardsLeft = countCardsinHand(players[0]); //everyone has same number of cards
+//        callBack(gameInfo);
+//    }
+//
+//}
+
 function playing(players,gameInfo){
     console.log('OK. please start your trick');
     var done = false;
@@ -259,7 +343,6 @@ function playing(players,gameInfo){
     players[i].broadcast.to(players[i].game).emit('stop');
     //player.broadcast.to(player.game).emit('otherTricks',result);
     one_round(players,gameInfo,function(result){
-        debug(999);
         if(result === 0 ){
             //this game is done
 
