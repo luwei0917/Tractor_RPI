@@ -63,7 +63,7 @@ function GameInfo(){
     this.tempPos = -1;
     this.count = -1;
     this.cardsLeft = -1;
-    this.firstgame = true;
+    this.firstgame = false;  //should initial as true
     this.dealer = -1;
     this.kitty = [];
 
@@ -104,7 +104,8 @@ function Dealing(players, gameInfo){
         }
         else{
             if(rank === deck[n].value){
-                players[i].emit('declaration?');
+                debug('four');
+                players[i].emit('declaration');
             }
         }
         i = i +1;
