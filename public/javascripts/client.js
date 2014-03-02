@@ -28,15 +28,16 @@ function connect_to_server ()
         $('#servermsg').text('I got card ' + message.suit+' ' + message.value);
         //console.log(message.value);
         console.log(mycards.length);
-        if (mycards.length === 27){
-            // $('#servermsg').text(mycards.valu);
-            var ccc = '';
-            for (var i = 0; i < 27; i++){
-                ccc += (mycards[i].suit + ' '+ mycards[i].value + ' , ' )
-            }
-            $('#servermsg').text(ccc);
 
-        }
+//        if (mycards.length === 27){
+//            // $('#servermsg').text(mycards.valu);
+//            var ccc = '';
+//            for (var i = 0; i < 27; i++){
+//                ccc += (mycards[i].suit + ' '+ mycards[i].value + ' , ' )
+//            }
+//            $('#servermsg').text(ccc);
+//
+//        }
     })
 
 
@@ -47,7 +48,8 @@ function connect_to_server ()
         for(var i=0;i<message.length; i++){
             ccc += (message[i].suit + ' '+ message[i].value + ' , ' )
         }
-        $('#servermsg').text(ccc);
+        //$('#servermsg').text(ccc);
+        $('#servermsg').myfunction(message,ccc);
     })
 
     socket.on('otherTricks', function(message) {
