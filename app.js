@@ -20,7 +20,7 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 var routes = require('./routes');
 var room = require('./routes/room.js');
-server.listen(8080);
+server.listen(8082);
 // Configuration
 
 app.configure(function(){
@@ -39,6 +39,7 @@ app.configure(function(){
     app.use(express.static(__dirname + '/public'));
     app.use(express.static(__dirname + '/javascripts'));
     app.set('view options', {layout: false});
+    app.use(express.favicon(__dirname+'/public/images/favicon.ico'));
 });
 
 // Routes
