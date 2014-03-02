@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -19,24 +18,27 @@ var express = require('express')
 var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
-var routes = require('./routes')
-var room = require('./routes/room.js')
-server.listen(8081);
+var routes = require('./routes');
+var room = require('./routes/room.js');
+server.listen(8080);
 // Configuration
 
 app.configure(function(){
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
-    //app.use(express.bodyParser());
-    //app.use(express.methodOverride());
-    //app.use(express.cookieParser());
-    //app.use(express.session({ secret: 'thesuperpassword' }));
+
+    app.use(express.bodyParser());
+    app.use(express.methodOverride());
+    app.use(express.cookieParser());
+    app.use(express.session({ secret: 'thesuperpassword' }));
     app.use(require('stylus').middleware({ src: __dirname + '/public' }));
     app.use(app.router);
+
+    app.use(express.errorHandler());
+    app.use(express.logger('dev'));
     app.use(express.static(__dirname + '/public'));
     app.use(express.static(__dirname + '/javascripts'));
     app.set('view options', {layout: false});
-    app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 });
 
 // Routes
@@ -56,12 +58,18 @@ io.configure(function(){
     });
 });
 
+var game_server = require('./public/javascripts/game.server.js');
+
 io.sockets.on('connection', function (client) {
     client.userid = UUID();
     console.log('\t socket.io:: player ' + client.userid + ' connected');
-    client.emit('uid', client.userid);
+    client.emit('uid', { hello: client.id });
 
-    client.join('room1');
+    client.join('lobby');
+
+    if (client.userid){
+        game_server.findGame(client);
+    }
 
     client.on('message', function(m) {
         console.log(m);
@@ -73,13 +81,15 @@ io.sockets.on('connection', function (client) {
 
     client.on('button', function(m) {
         console.log(m + ' clicked by ' + client.userid);
-        client.broadcast.to('room1').emit('msg', m);
+        client.broadcast.to('lobby').emit('msg', m);
         client.emit('msg', m);
+        client.emit(client);
     });
 
-    client.on('input', function(m) {
+
+    client.on('nousenow', function(m) {
         console.log('recieved input ' + m + ' from ' +client.userid);
-        io.sockets.in('room1').emit('nickname', m);
+        io.sockets.in('lobby').emit('msg', m);
 
     });
 });

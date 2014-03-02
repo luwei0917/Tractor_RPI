@@ -2,7 +2,9 @@ $(document).ready(function(){
 
     $('#gamestart').click(function(){
         $('#gamestart').fadeOut('fast');
-        connect_to_server();
+        //$('#anewroom').load('/room1')
+        //connect_to_server();
+        window.open('/room1');
     });
 
     $('#button1').click(function() {
@@ -18,18 +20,30 @@ $(document).ready(function(){
         });
 
     $('#inputbutton').click(function() {
-        connect_to_server();
-        send_msg ('input', $('#input1').val());
-        $('#input1').val('')
-    })
-    $('#input1').keypress(function(k) {
-        if (k.which === 13)
-        {
-            connect_to_server();
-            send_msg ('input', $('#input1').val());
+        if(myturn){
+            var res = $('#input1').val().split(' ');
+            var cd = {suit: res[0], value: res[1]};
+            send_msg ('usecard', cd);
             $('#input1').val('')
         }
+        else{
+            $('#gogogo').text('Not your turn yet, Do not panic');
+        }
+    })
+    $('#input1').keypress(function(k) {
 
+        if (k.which === 13)
+        {
+            if (myturn){
+                var res = $('#input1').val().split(' ');
+                var cd = {suit: res[0], value: res[1]};
+                send_msg ('usecard', cd);
+                $('#input1').val('')
+            }
+            else{
+                $('#gogogo').text('Not your turn yet, Do not panic');
+            }
+        }
     })
 
 })
