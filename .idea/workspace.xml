@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/client.js" afterPath="$PROJECT_DIR$/public/javascripts/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/index.js" afterPath="$PROJECT_DIR$/public/javascripts/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tractor.iws" />
@@ -105,7 +102,7 @@
       <file leaf-file-name="room1.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/room1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="52" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3884462" vertical-offset="15" max-vertical-offset="1755">
+            <state line="6" column="60" selection-start="390" selection-end="390" vertical-scroll-proportion="0.17928287" vertical-offset="0" max-vertical-offset="1845">
               <folding />
             </state>
           </provider>
@@ -494,7 +491,11 @@
       <created>1393725636982</created>
       <updated>1393725636982</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="3rd version&#10;">
+      <created>1393730124217</created>
+      <updated>1393730124217</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -889,7 +890,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/room1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="52" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3884462" vertical-offset="15" max-vertical-offset="1755">
+        <state line="6" column="60" selection-start="390" selection-end="390" vertical-scroll-proportion="0.17928287" vertical-offset="0" max-vertical-offset="1845">
           <folding />
         </state>
       </provider>
