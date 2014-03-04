@@ -39,11 +39,17 @@ a {
   top: 0px;
   left: 20px;
 }
+.cards {
+  height: 100px;
+  width: 75px;
+  position: absolute;
+  display: inline-block;
+}
 #cardDiv {
   position: relative;
 }
 #overlay {
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 0px;
 }

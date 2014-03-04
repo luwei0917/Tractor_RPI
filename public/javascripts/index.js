@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
+    //window.open('/room1','_self');
     $('#gamestart').click(function(){
         $('#gamestart').fadeOut('fast');
         //$('#anewroom').load('/room1')
         //connect_to_server();
-        window.open('/room1');
+        window.open('/room1','_self');
     });
 
     $('#button1').click(function() {
