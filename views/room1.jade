@@ -1,0 +1,43 @@
+doctype html
+head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js')
+    script(type='text/javascript' src='/socket.io/socket.io.js')
+    script(type='text/javascript' src='/javascripts/index.js')
+    script(type='text/javascript' src='/javascripts/client.js')
+    script(type='text/javascript' src='/javascripts/room1.js')
+    script(type='text/javascript' src='/javascripts/poker.min.js')
+body
+    #roomtitle
+    h2 Welcome to Room 1!
+    canvas(id='canvas')
+    //#cardimage(style="position: relative; left: 0; top: 0;")
+        //img(src="/images/cards/1.png")#cA
+        //img(src="/images/cards/2.png")#sA
+    br
+    #cardDiv
+      canvas(id='cardCanvas',style="height:100px;width:2000px;")
+      #overlay
+    p#showcard
+
+    button#button1(type='button') Button1
+    button#button2(type='button') Button2
+    br
+    input#input1(type='text')
+    button#inputbutton(type='button') Submit
+    p Position
+    p#position
+    p can i go?
+    br
+    p#gogogo
+    br
+    br
+    p played card
+    p#trick
+    br
+    br
+    p this is servermsg
+    P#servermsg
+    br
+    br
