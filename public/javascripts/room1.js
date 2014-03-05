@@ -1,70 +1,32 @@
+var chosen = [];
 $(document).ready(function(){
 
 
     var convert = ['X','A','2','3','4','5','6','7','8','9','10','J','Q','K'];
 
-//
-//    (function( $ ){
-//        $.fn.myfunction = function(context,ccc) {
-//            //alert('hello world');
-//            $('#servermsg').text(ccc);
-//
-//            //alert(value);
-//            //alert(suit);
-//            var suit = 'nothing';
-//            var value = -1;
-//            //var divarray = [];
-//            for(var i =0 ;i<context.length;i++){
-//                var $temp = $('<div>',{id:i.toString(), class:"cards"});
-//                //$($temp).attr('left','0');
-//                //document.getElementById("card"+i).style.left = parseString((-50)*i)+"px";
-//                $($temp).css('left',(i*15).toString()+"px");
-//                //$($temp).attr('position','absolute');
-//
-//                //divarray.push($temp);
-//                //ALL_SUIT =['spades','hearts','diamonds','clubs','jokers'];
-//                if(context[i].suit === "jokers"){
-//                    if(context[i].value === 1){
-//                        suit = 's' //little joker
-//                        value = 'JOKER';
-//                    }
-//                    else{
-//                        suit = 'h'; //big joker
-//                        value= 'JOKER';
-//                    }
-//                }
-//                else{
-//                    suit = context[i].suit;
-//                    value = convert[context[i].value];
-//                }
-//
-//                $temp.append(Poker.getCardImage(100,suit,value));
-//                $('#overlay').append($temp);
-//            }
-//            $('.cards').click(function(){
-//                //alert(this.id);
-//                if ($(this).hasClass('select')){
-//                    $(this).animate({top:'+=20px'},1);
-//                    $(this).removeClass('select')
-//                }else{
-//                    $(this).animate({top:'-=20px'},1);
-//                    $(this).addClass('select')
-//                }
-//            });
-//            return this;
-//        };
-//    })( jQuery );
-//
+    function send(){
+        var list = [];
+        if(mycards.length != chosen.length){
+            alert("A oh");
+        }
+        for(var i =0 ; i<chosen.length ; i++){
+            if(chosen[i]){
+                list.push(mycards[i]);
+            }
+        }
+        send_msg ('usecard', list);
+    }
 
     $.fn.myfunction = function(context,ccc) {
         //alert('hello world');
         $('#servermsg').text(ccc);
-
+        mycards = context;
         //alert(value);
         //alert(suit);
+        chosen = [];
         var suit = 'nothing';
         var value = -1;
-        //var divarray = [];
+
         for(var i =0 ;i<context.length;i++){
             var $temp = $('<div>',{id:i.toString(), class:"cards"});
             //$($temp).attr('left','0');
@@ -88,16 +50,18 @@ $(document).ready(function(){
                 suit = context[i].suit;
                 value = convert[context[i].value];
             }
-
+            chosen.push(0);
             $temp.append(Poker.getCardImage(100,suit,value));
             $('#overlay').append($temp);
         }
         $('.cards').click(function(){
             //alert(this.id);
             if ($(this).hasClass('select')){
+                chosen[this.id] = 0;
                 $(this).animate({top:'+=20px'},1);
                 $(this).removeClass('select')
             }else{
+                chosen[this.id] = 1;
                 $(this).animate({top:'-=20px'},1);
                 $(this).addClass('select')
             }

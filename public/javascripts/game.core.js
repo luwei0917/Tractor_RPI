@@ -207,13 +207,19 @@ function updateHand(player){
 function do_trick(player, gameInfo, callback){
 
     player.on('usecard', function(result) {
-        debug(2);
-        var oneCard = new Card(result.suit,parseInt(result.value));
-        console.log('gamecore:: ' + player.userid + ' used card ' + result.suit + ' ' + result.value);
-        //TODO: It should be possible to play more than one card
-        // Now I just made one value array;
+        debug('gamecore:: ' + player.userid );
         var cardsCombination = [];
-        cardsCombination.push(oneCard);
+        for(var i = 0; i< result.length ; i++){
+            var temp = new Card(result[i].suit, result[i].value);
+            cardsCombination.push(temp);
+            console.log(+ ' used card ' + temp.suit + ' ' + temp.value);
+        }
+        //var oneCard = new Card(result.suit,parseInt(result.value));
+
+
+        // Now I just made one value array;
+
+        //cardsCombination.push(oneCard);
         var isLegal = deleteHand(player , cardsCombination);  // -1 means not legal
         // if want he want to play is not legal. Tell him.
         if (isLegal === -1){
