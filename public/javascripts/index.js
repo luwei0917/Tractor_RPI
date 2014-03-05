@@ -61,6 +61,7 @@ $(document).ready(function(){
                 }
             }
             send_msg ('usecard', list);
+            $(".cards").empty();
         }
         else{
             $('#gogogo').text('Not your turn yet, Do not panic');

@@ -185,8 +185,9 @@ function deleteHand(player,cardsCombination){
         //console.log(index);
         //console.log('length '+ player.cards.length);
         debug('deletedone');
-        return 1;  //means good
+
     }
+    return 1;  //means good
 }
 
 
@@ -212,7 +213,7 @@ function do_trick(player, gameInfo, callback){
         for(var i = 0; i< result.length ; i++){
             var temp = new Card(result[i].suit, result[i].value);
             cardsCombination.push(temp);
-            console.log(+ ' used card ' + temp.suit + ' ' + temp.value);
+            console.log( ' used card ' + temp.suit + ' ' + temp.value);
         }
         //var oneCard = new Card(result.suit,parseInt(result.value));
 
