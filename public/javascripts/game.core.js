@@ -229,8 +229,8 @@ function do_trick(player, gameInfo, callback){
         else{
             //debug(5);
             updateHand(player);
-            player.broadcast.to(player.game).emit('otherTricks',result);
-            player.emit('otherTricks',result);
+            player.broadcast.to(player.game).emit('otherTricks',result,gameInfo.dealer);
+            player.emit('otherTricks',result,gameInfo.dealer);
             //next
             gameInfo.dealer = ((gameInfo.dealer + 1)%4);
             player.emit('stop');

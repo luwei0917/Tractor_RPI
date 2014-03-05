@@ -52,10 +52,12 @@ function connect_to_server ()
         $('#servermsg').myfunction(message,ccc);
     })
 
-    socket.on('otherTricks', function(message) {
+    socket.on('otherTricks', function(message,num) {
+        $('#trick').append('<p>' +'player '+num +' plays '+ '</p>');
         for(var i=0;i<message.length; i++){
-            $('#trick').append('<p>' + player + message[i].suit+' '+ message[i].value +'</p>');
+            $('#trick').append(message[i].suit+' '+ message[i].value + '\t');
         }
+        $('#trick').append('<p> </p>')
         //$('#servermsg').
         //
         //text(ccc);
