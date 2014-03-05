@@ -53,8 +53,12 @@ function connect_to_server ()
     })
 
     socket.on('otherTricks', function(message) {
-
-        $('#trick').append('<p>' +  message.suit+' '+ message.value +'</p>');
+        for(var i=0;i<message.length; i++){
+            $('#trick').append('<p>' +  message.suit+' '+ message.value +'</p>');
+        }
+        //$('#servermsg').
+        //
+        //text(ccc);
     })
 
     socket.on('initial', function() {
