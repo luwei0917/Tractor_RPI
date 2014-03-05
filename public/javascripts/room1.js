@@ -31,7 +31,7 @@ $(document).ready(function(){
             var $temp = $('<div>',{id:i.toString(), class:"cards"});
             //$($temp).attr('left','0');
             //document.getElementById("card"+i).style.left = parseString((-50)*i)+"px";
-            $($temp).css('left',(i*15).toString()+"px");
+            $($temp).css('left',(i*20).toString()+"px");
             //$($temp).attr('position','absolute');
 
             //divarray.push($temp);

@@ -53,15 +53,17 @@ $(document).ready(function(){
         if(myturn){
             var list = [];
             if(mycards.length != chosen.length){
-                alert("A oh");
+                //alert("A oh");
             }
-            for(var i =0 ; i<chosen.length ; i++){
-                if(chosen[i]){
-                    list.push(mycards[i]);
+            else{
+                for(var i =0 ; i<chosen.length ; i++){
+                    if(chosen[i]){
+                        list.push(mycards[i]);
+                    }
                 }
+                send_msg ('usecard', list);
+                $(".cards").empty();
             }
-            send_msg ('usecard', list);
-            $(".cards").empty();
         }
         else{
             $('#gogogo').text('Not your turn yet, Do not panic');
