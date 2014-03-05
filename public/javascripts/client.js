@@ -54,7 +54,7 @@ function connect_to_server ()
 
     socket.on('otherTricks', function(message) {
         for(var i=0;i<message.length; i++){
-            $('#trick').append('<p>' +  message.suit+' '+ message.value +'</p>');
+            $('#trick').append('<p>' +  message[i].suit+' '+ message[i].value +'</p>');
         }
         //$('#servermsg').
         //

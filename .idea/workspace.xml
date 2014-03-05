@@ -57,7 +57,7 @@
       <file leaf-file-name="client.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="9" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.37138927" vertical-offset="585" max-vertical-offset="1665">
+            <state line="62" column="0" selection-start="1522" selection-end="1775" vertical-scroll-proportion="0.5158184" vertical-offset="555" max-vertical-offset="1665">
               <folding />
             </state>
           </provider>
@@ -447,7 +447,11 @@
       <created>1393988073479</created>
       <updated>1393988073479</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="3rd version&#10;">
+      <created>1393988260089</created>
+      <updated>1393988260089</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -842,7 +846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="9" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.37138927" vertical-offset="585" max-vertical-offset="1665">
+        <state line="62" column="0" selection-start="1522" selection-end="1775" vertical-scroll-proportion="0.5158184" vertical-offset="555" max-vertical-offset="1665">
           <folding />
         </state>
       </provider>
