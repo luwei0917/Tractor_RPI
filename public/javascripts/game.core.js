@@ -106,28 +106,30 @@ function next(deck,i,players,gameInfo){
         }
 
         for(var i =0;i<deck.length;i++){
-            players[j].cards.push(deck[i]);
+            addCard(players[j],deck[i]);
         }
-
-        sortCards(players);
+        updateHand(players[j]);
+        //sortCards(players);
 
 
     }
 }
 
-function sendCard(card,player,dominantRank,callback){
-
+function addCard(player,card){
     for(var i =0 ;i< ALL_SUIT.length;i++){
         if(ALL_SUIT[i] === card.suit){
             player.suit[i].push(card);
             player.suit[i].sort(function(a,b){return b.value - a.value });
         }
     }
+}
 
-    player.cards.push(card);
+function sendCard(card,player,dominantRank,callback){
+    addCard(player,card);
+    //player.cards.push(card);
     updateHand(player);
     //player.emit('newcard',card);
-    var time = 0.01*1000;  // 0.1s
+    var time = 0.01*1000;  // 0.01s
     var IsDominantSuit = false;
     if(card.value === dominantRank ){
         player.emit('declaration');
@@ -140,62 +142,8 @@ function sendCard(card,player,dominantRank,callback){
     }
 
     setTimeout(function() {
-
         callback(IsDominantSuit); }, time);
 }
-
-//
-//function Dealing(players, gameInfo){
-//    console.log('Start dealing');
-//    var deck= Deck();
-//    //console.log(deck);
-//    //console.log(deck.length);
-//    var n = deck.length;
-//    var i = gameInfo.dealer;
-//    debug('two');
-//    var rank = gameInfo.dominantRank;
-//    var de = setInterval(function(){
-//        n -= 1;
-//        i = i%4;
-//        players[i].cards.push(deck[n]);
-//        players[i].emit('newcard', deck[n]);
-//        //TODO: determining the dominant suit and rank
-//        if(gameInfo.firstgame){
-//            if(deck[n].value === 2){
-//                debug('one');
-//                players[i].emit('dealer');
-//                players[(i+2)%4].emit('defender');
-//                players[(i+1)%4].emit('attacker');
-//                players[(i+3)%4].emit('attacker');
-//                players[i].declarer = 1;
-//                players[(i+2)%4].declarer = 0;
-//                players[(i+1)%4].declarer = 1;
-//                players[(i+3)%4].declarer = 0;
-//
-//                gameInfo.dealer = i;
-//                gameInfo.firstgame = false;
-//                gameInfo.dominantSuit = deck[n].suit;
-//                gameInfo.dominantRank = players[i].score;
-//            }
-//        }
-//        else{
-//            if(rank === deck[n].value){
-//                debug('four');
-//                players[i].emit('declaration');
-//            }
-//        }
-//        i = i +1;
-//        if (n === 8){
-//            // last 8 cards will go to dealer
-//            while(n>0){
-//                n -= 1;
-//                players[gameInfo.dealer].cards.push(deck[n]);
-//            }
-//            clearInterval(de);
-//            sortCards(players);
-//        }
-//    },30)
-//}
 
 
 function find(player,target){
@@ -447,3 +395,59 @@ var game_core= function (game_instance) {
 if( 'undefined' != typeof global ) {
     module.exports = global.game_core = game_core;
 }
+
+
+
+
+//
+//function Dealing(players, gameInfo){
+//    console.log('Start dealing');
+//    var deck= Deck();
+//    //console.log(deck);
+//    //console.log(deck.length);
+//    var n = deck.length;
+//    var i = gameInfo.dealer;
+//    debug('two');
+//    var rank = gameInfo.dominantRank;
+//    var de = setInterval(function(){
+//        n -= 1;
+//        i = i%4;
+//        players[i].cards.push(deck[n]);
+//        players[i].emit('newcard', deck[n]);
+//        //TODO: determining the dominant suit and rank
+//        if(gameInfo.firstgame){
+//            if(deck[n].value === 2){
+//                debug('one');
+//                players[i].emit('dealer');
+//                players[(i+2)%4].emit('defender');
+//                players[(i+1)%4].emit('attacker');
+//                players[(i+3)%4].emit('attacker');
+//                players[i].declarer = 1;
+//                players[(i+2)%4].declarer = 0;
+//                players[(i+1)%4].declarer = 1;
+//                players[(i+3)%4].declarer = 0;
+//
+//                gameInfo.dealer = i;
+//                gameInfo.firstgame = false;
+//                gameInfo.dominantSuit = deck[n].suit;
+//                gameInfo.dominantRank = players[i].score;
+//            }
+//        }
+//        else{
+//            if(rank === deck[n].value){
+//                debug('four');
+//                players[i].emit('declaration');
+//            }
+//        }
+//        i = i +1;
+//        if (n === 8){
+//            // last 8 cards will go to dealer
+//            while(n>0){
+//                n -= 1;
+//                players[gameInfo.dealer].cards.push(deck[n]);
+//            }
+//            clearInterval(de);
+//            sortCards(players);
+//        }
+//    },30)
+//}
