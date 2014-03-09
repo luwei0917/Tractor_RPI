@@ -3,19 +3,6 @@ $(document).ready(function(){
 
     $(".cards").empty();
     var convert = ['X','A','2','3','4','5','6','7','8','9','10','J','Q','K'];
-//
-//    function send(){
-//        var list = [];
-//        if(mycards.length != chosen.length){
-//            alert("A oh");
-//        }
-//        for(var i =0 ; i<chosen.length ; i++){
-//            if(chosen[i]){
-//                list.push(mycards[i]);
-//            }
-//        }
-//        send_msg ('usecard', list);
-//    }
 
     $.fn.myfunction = function(context,ccc) {
         //alert('hello world');
