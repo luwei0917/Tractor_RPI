@@ -126,12 +126,13 @@ function addCard(player,card){
 
 function sendCard(card,player,dominantRank,callback){
     addCard(player,card);
+    debug(card.suit + ' '+ card.value);
     //player.cards.push(card);
     updateHand(player);
     //player.emit('newcard',card);
     var time = 0.01*1000;  // 0.01s
     var IsDominantSuit = false;
-    if(card.value === dominantRank ){
+    if(card.value === dominantRank && card.suit != 'jokers'){
         player.emit('declaration');
         player.broadcast.to(player.game).emit('declarationOff');
         time = 10*1000 //10s;
