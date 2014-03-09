@@ -1,5 +1,6 @@
 var mycards = [];
 var myturn = false;
+var DominantSuitChance = false;
 function connect_to_server ()
 {
     socket = io.connect();
@@ -94,9 +95,12 @@ function connect_to_server ()
         $('#position').text('you are attacker');
     })
     socket.on('declaration',function(){
+        DominantSuitChance = true;
         $('#position').append('<p>' + '    You can choose the dominant suit'  +'</p>');
     })
-
+    socket.on('declarationOff',function(){
+        DominantSuitChance = false;
+    })
 
 }
 
