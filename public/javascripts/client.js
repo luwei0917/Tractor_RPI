@@ -50,6 +50,7 @@ function connect_to_server ()
         }
         //$('#servermsg').text(ccc);
         $('#servermsg').myfunction(message,ccc);
+        socket.removeListener('updateHand');
     })
 
     socket.on('otherTricks', function(message,num) {

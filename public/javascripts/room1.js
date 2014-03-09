@@ -1,12 +1,12 @@
 var chosen = [];
 $(document).ready(function () {
 
-    $(".cards").empty();
+    $("#overlay").empty();
 
     var convert = ['X', 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 
     $.fn.myfunction = function (context, ccc) {
-        $(".cards").empty();
+        $("#overlay").empty();
         $('#servermsg').text(ccc);
         mycards = context;
         //alert(value);
