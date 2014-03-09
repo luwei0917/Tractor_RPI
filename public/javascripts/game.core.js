@@ -120,7 +120,17 @@ function addCard(player,card){
     for(var i =0 ;i< ALL_SUIT.length;i++){
         if(ALL_SUIT[i] === card.suit){
             player.suit[i].push(card);
-            player.suit[i].sort(function(a,b){return b.value - a.value });
+            player.suit[i].sort(function(a,b){
+                if (a.value === 1){
+                    return true;
+                }
+                else if (b.value === 1){
+                    return true;
+                }
+                else{
+                    return b.value - a.value
+                }
+            });
         }
     }
 }
@@ -131,16 +141,16 @@ function sendCard(card,player,dominantRank,callback){
     //player.cards.push(card);
     updateHand(player);
     //player.emit('newcard',card);
-    var time = 0.01*1000;  // 0.01s
+    var time = 0.25*1000;  // 0.01s
     var IsDominantSuit = false;
     if(card.value === dominantRank && card.suit != 'jokers'){
         player.emit('declaration');
-        player.broadcast.to(player.game).emit('declarationOff');
-        time = 10*1000 //10s;
+        //player.broadcast.to(player.game).emit('declarationOff');
+        time = 0.5*1000 //10s;
         IsDominantSuit = true;
     }
     else{
-        player.emit('declarationOff');
+        //player.emit('declarationOff');
     }
 
     setTimeout(function() {
