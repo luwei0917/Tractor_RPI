@@ -50,7 +50,7 @@ function connect_to_server ()
         }
         //$('#servermsg').text(ccc);
         $('#servermsg').myfunction(message,ccc);
-        socket.removeListener('updateHand');
+        //socket.removeListener('updateHand');
     })
 
     socket.on('otherTricks', function(message,num) {
@@ -62,7 +62,7 @@ function connect_to_server ()
         //$('#servermsg').
         //
         //text(ccc);
-        display_used_cards(message);
+        display_used_cards(message, num);
     })
 
     socket.on('initial', function() {

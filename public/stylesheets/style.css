@@ -37,15 +37,34 @@ a {
   display: inline-block;
   margin-left: -55px;
 }
-#usedcardDiv {
-  padding: 50px;
+#usedcardDiv1 {
   position: relative;
-  top: 250px;
+  top: 0px;
+  left: 50px;
+  margin-bottom: -40px;
+}
+#usedcardDiv2 {
+  position: relative;
+  top: -10px;
+  left: 50px;
+  margin-bottom: -20px;
+}
+#usedcardDiv3 {
+  position: relative;
+  top: -10px;
+  left: 50px;
+  margin-bottom: -20px;
+}
+#usedcardDiv4 {
+  position: relative;
+  top: -10px;
+  left: 50px;
+  margin-bottom: -20px;
 }
 #mycardDiv {
-  padding: 50px;
   position: relative;
-  top: 250px;
+  top: -10px;
+  left: 50px;
 }
 #overlay {
   position: relative;

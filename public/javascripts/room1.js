@@ -20,18 +20,20 @@ $(document).ready(function () {
     connect_to_server();
 });
 
-function display_used_cards(context)
+function display_used_cards(context, num)
 {
-    var parsed = parse_cards(context);
+    var parsed = parse_cards(context, 'cards');
     parsed.forEach(function(e){
-        $('#usedcardDiv').append(e);
+        var div = '#usedcardDiv' + (num+1).toString();
+        $(div).append(e);
     });
+    //$('#usedcardDiv').append($('<div class="playernum"><p>player ' + (num+1).toString() + '</p></div>'));
 }
 
-function parse_cards(context) {
+function parse_cards(context, clas) {
     res = [];
     for (var i = 0; i < context.length; i++) {
-        var $temp = $('<div>', {id: i.toString(), class: "cards"});
+        var $temp = $('<div>', {id: i.toString(), class: clas});
         //$($temp).css('left', (i * 20).toString() + "px");
         //$($temp).css('margin-left', -55 + "px");
 
@@ -57,7 +59,8 @@ function parse_cards(context) {
 }
 
 function display_my_cards(context) {
-    var parsed = parse_cards(context);
+    var clas = 'cards';
+    var parsed = parse_cards(context, clas);
     parsed.forEach(function(e){
         $('#overlay').append(e);
     });
