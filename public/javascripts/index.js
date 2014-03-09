@@ -62,7 +62,7 @@ $(document).ready(function(){
                     }
                 }
                 send_msg ('usecard', list);
-                $(".cards").empty();
+                $("#overlay").empty();
             }
         }
         else{
