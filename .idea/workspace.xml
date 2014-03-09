@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/client.js" afterPath="$PROJECT_DIR$/public/javascripts/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/game.core.js" afterPath="$PROJECT_DIR$/public/javascripts/game.core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/index.js" afterPath="$PROJECT_DIR$/public/javascripts/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/room1.jade" afterPath="$PROJECT_DIR$/views/room1.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tractor.iws" />
@@ -50,7 +46,7 @@
       <file leaf-file-name="client.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.54545456" vertical-offset="0" max-vertical-offset="1830">
+            <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="1830">
               <folding />
             </state>
           </provider>
@@ -531,7 +527,11 @@
       <created>1394344904955</created>
       <updated>1394344904955</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="3rd version&#10;">
+      <created>1394346339603</created>
+      <updated>1394346339603</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -927,13 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/room1.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="17" selection-start="1052" selection-end="1052" vertical-scroll-proportion="-13.48" vertical-offset="203" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="21" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1365">
@@ -948,9 +941,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/room1.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="17" selection-start="1052" selection-end="1052" vertical-scroll-proportion="-13.48" vertical-offset="203" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.54545456" vertical-offset="0" max-vertical-offset="1830">
+        <state line="11" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="1830">
           <folding />
         </state>
       </provider>
