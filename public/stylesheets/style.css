@@ -3,55 +3,51 @@ body {
   font: 20px Helvetica, "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a {
+  position: relative;
   color: #00b7ff;
 }
 #gamestart {
+  position: relative;
   height: 100px;
   width: 200px;
   border-radius: 10px;
   background-color: #abcdef;
 }
 #gamestart p {
+  position: relative;
   padding-top: 35px;
   padding-left: 35px;
   font-size: 20;
   color: #ee82ee;
 }
 #welcomemsg {
+  position: relative;
   display: none;
 }
 #tractor {
+  position: relative;
   display: none;
   height: 100px;
   width: 150px;
 }
-#card1 {
-  height: 100px;
-  width: 75px;
-  position: relative;
-  top: 0px;
-  left: 0;
-}
-#card2 {
-  height: 100px;
-  width: 75px;
-  position: absolute;
-  top: 0px;
-  left: 20px;
-}
 .cards {
+  position: relative;
   height: 100px;
   width: 75px;
-  position: absolute;
   display: inline-block;
+  margin-left: -55px;
 }
-#cardDiv {
+#usedcardDiv {
   position: relative;
+  top: 250px;
+}
+#mycardDiv {
+  padding: 50px;
+  position: relative;
+  top: 250px;
 }
 #overlay {
   position: relative;
-  top: 0px;
-  left: 0px;
 }
 .select {
   padding: 0px;
