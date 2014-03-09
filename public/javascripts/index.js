@@ -70,9 +70,6 @@ $(document).ready(function(){
     $('#IDominantSuit').click(function() {
         if(DominantSuitChance){
             var card;
-            if(chosen.length != 1){
-                alert('chosen length not 1 (is ' + chosen.length);
-            }
             for(var i =0 ; i<chosen.length ; i++){
                 if(chosen[i]){
                     card = mycards[i];

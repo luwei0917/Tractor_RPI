@@ -116,12 +116,22 @@ function next(deck,i,players,gameInfo){
 }
 
 function sendCard(card,player,dominantRank,callback){
+
+    for(var i =0 ;i< ALL_SUIT.length;i++){
+        if(ALL_SUIT[i] === card.suit){
+            player.suit[i].push(card);
+            player.suit[i].sort(function(a,b){return b.value - a.value });
+        }
+    }
+
     player.cards.push(card);
-    player.emit('newcard',card);
-    var time = 0.1*1000;  // 0.1s
+    updateHand(player);
+    //player.emit('newcard',card);
+    var time = 0.01*1000;  // 0.1s
     var IsDominantSuit = false;
     if(card.value === dominantRank ){
         player.emit('declaration');
+        player.broadcast.to(player.game).emit('declarationOff');
         time = 10*1000 //10s;
         IsDominantSuit = true;
     }
@@ -130,7 +140,7 @@ function sendCard(card,player,dominantRank,callback){
     }
 
     setTimeout(function() {
-        updateHand(player);
+
         callback(IsDominantSuit); }, time);
 }
 

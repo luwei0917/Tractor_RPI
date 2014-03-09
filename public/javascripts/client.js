@@ -3,6 +3,7 @@ var myturn = false;
 var DominantSuitChance = false;
 function connect_to_server ()
 {
+    mycards = [];
     socket = io.connect();
     socket.on('connect', function(){
         this.state = 'connecting';
@@ -28,8 +29,9 @@ function connect_to_server ()
         mycards.push(message);
         $('#servermsg').text('I got card ' + message.suit+' ' + message.value);
         //console.log(message.value);
+        var num =0;
         console.log(mycards.length);
-
+        display_used_cards(message, num);
 //        if (mycards.length === 27){
 //            // $('#servermsg').text(mycards.valu);
 //            var ccc = '';
@@ -96,10 +98,11 @@ function connect_to_server ()
     })
     socket.on('declaration',function(){
         DominantSuitChance = true;
-        $('#position').append('<p>' + '    You can choose the dominant suit'  +'</p>');
+        $('#declaration').text('You can choose the dominant suit');
     })
     socket.on('declarationOff',function(){
         DominantSuitChance = false;
+        $('#declaration').text('Nothing');
     })
 
 }
