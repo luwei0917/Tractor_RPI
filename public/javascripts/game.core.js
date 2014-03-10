@@ -3,7 +3,7 @@ DECK_NUM = 2;
 SUIT_NUM = 4;
 VALUE_NUM = 13;
 JOKER_NUM =2;
-ALL_SUIT =['spades','hearts','diamonds','clubs','jokers'];
+ALL_SUIT =['jokers','spades','hearts','diamonds','clubs'];
 function Card(my_suit,my_value){
     this.suit = my_suit;
     this.value = my_value;
@@ -44,13 +44,13 @@ function Deck(){
     var deck = [];
 
     for(var i = 0; i <DECK_NUM; i++ ){
-        for ( var j = 0 ; j< SUIT_NUM; j++){
+        for ( var j = 1 ; j<= SUIT_NUM; j++){
             for( var k =0 ; k < VALUE_NUM ; k++){
                 deck.push(new Card(ALL_SUIT[j],k+1))
             }
         }
         for( var j =0; j < JOKER_NUM ; j ++){
-            deck.push(new Card(ALL_SUIT[4],j+1))
+            deck.push(new Card(ALL_SUIT[0],j+1))
         }
     }
     shuffle(deck);
@@ -66,6 +66,8 @@ function GameInfo(){
     this.cardsLeft = -1;
     this.firstgame = false;  //should initial as true
     this.dealer = -1;
+    this.leader = -1;
+    this.currentPlayer = -1;
     this.kitty = [];
 
 }
@@ -88,7 +90,7 @@ function Dealing(players,gameInfo){
 
 
 function next(deck,i,players,gameInfo){
-    debug(deck.length);
+    //debug(deck.length);
     if(deck.length>8){
         var card = deck.shift();
         sendCard(card,players[i], gameInfo.dominantRank,function(result){
@@ -111,7 +113,9 @@ function next(deck,i,players,gameInfo){
         }
         updateHand(players[j]);
         //sortCards(players);
+        debug('Dealing Done');
 
+        playing(players,gameInfo)
 
     }
 }
@@ -121,8 +125,11 @@ function addCard(player,card){
         if(ALL_SUIT[i] === card.suit){
             player.suit[i].push(card);
             player.suit[i].sort(function(a,b){
+                if(a.suit === 'jokers'){
+                    return b.value - a.value
+                }
                 if (a.value === 1){
-                    return true;
+                    return false;
                 }
                 else if (b.value === 1){
                     return true;
@@ -137,16 +144,16 @@ function addCard(player,card){
 
 function sendCard(card,player,dominantRank,callback){
     addCard(player,card);
-    debug(card.suit + ' '+ card.value);
+    //debug(card.suit + ' '+ card.value);
     //player.cards.push(card);
     updateHand(player);
     //player.emit('newcard',card);
-    var time = 0.25*1000;  // 0.01s
+    var time = 0.01*1000;  // 0.01s
     var IsDominantSuit = false;
     if(card.value === dominantRank && card.suit != 'jokers'){
         player.emit('declaration');
         //player.broadcast.to(player.game).emit('declarationOff');
-        time = 0.5*1000 //10s;
+        //time = 0.5*1000 //10s;
         IsDominantSuit = true;
     }
     else{
@@ -175,24 +182,66 @@ function debug(message){
     console.log(message +'---------------------------------');
 }
 
-function sortCards(players){
 
-    //ALL_SUIT 'spades','hearts','diamonds','clubs','jokers'
-    for(var k = 0 ; k <4 ;k++){
-        for(var i=0 ; i< players[k].cards.length ; i++){
-            for(var j =0 ; j < ALL_SUIT.length ; j++){
-                if(ALL_SUIT[j] === players[k].cards[i].suit){
-                    players[k].suit[j].push(players[k].cards[i]);
-                }
+function nextPlayer(i){
+    return (i+1)%4;
+}
+
+function playing(players,gameInfo){
+    console.log('OK. please start your trick');
+    var done = false;
+
+    gameInfo.count = 0;
+
+    var pos = gameInfo.dealer;
+    gameInfo.currentPlayer = gameInfo.dealer;
+    var player = players[pos];
+    player.emit('go');
+    player.broadcast.to(player.game).emit('stop');
+    var n = 0;
+    while( n < 4){
+        n++;
+        var player = players[pos];
+
+        pos = nextPlayer(pos);
+        player.on('usecard', function(result) {
+            var player = players[gameInfo.currentPlayer];
+            debug('gamecore:: ' + player.userid );
+            var cardsCombination = [];
+            for(var i = 0; i< result.length ; i++){
+                var temp = new Card(result[i].suit, result[i].value);
+                cardsCombination.push(temp);
+                console.log( ' used card ' + temp.suit + ' ' + temp.value);
             }
-        }
-        for(var i =0 ;i<ALL_SUIT.length; i++){
-            players[k].suit[i].sort(function(a,b){return b.value - a.value });
-        }
-        //console.log('Hi, I am here gg');
-        updateHand(players[k]);
-    }
+            //cardsCombination.push(oneCard);
+            var isLegal = deleteHand(player , cardsCombination);  // -1 means not legal
+            // if want he want to play is not legal. Tell him.
+            if (isLegal === -1){
+                players[i].emit('DoAgain');
+            }
+            else{
+                //debug(5);
+                updateHand(player);
+                player.broadcast.to(player.game).emit('otherTricks',result,gameInfo.currentPlayer);
+                player.emit('otherTricks',result,gameInfo.currentPlayer);
 
+                player.emit('stop');
+                //next
+                gameInfo.count++;
+                if(gameInfo.count === 4){
+                    // new
+                    gameInfo.count = 0;
+                    gameInfo.currentPlayer = gameInfo.leader;
+                }
+                else if(gameInfo.count < 4){
+                    gameInfo.currentPlayer =nextPlayer(gameInfo.currentPlayer);
+                }
+                var myPos = gameInfo.currentPlayer;
+                players[myPos].emit('go');
+
+            }
+        })
+    }
 }
 
 
@@ -240,113 +289,6 @@ function updateHand(player){
     player.emit('updateHand', player.cards);
 }
 
-
-function do_trick(player, gameInfo, callback){
-
-    player.on('usecard', function(result) {
-        debug('gamecore:: ' + player.userid );
-        var cardsCombination = [];
-        for(var i = 0; i< result.length ; i++){
-            var temp = new Card(result[i].suit, result[i].value);
-            cardsCombination.push(temp);
-            console.log( ' used card ' + temp.suit + ' ' + temp.value);
-        }
-        //var oneCard = new Card(result.suit,parseInt(result.value));
-
-
-        // Now I just made one value array;
-
-        //cardsCombination.push(oneCard);
-        var isLegal = deleteHand(player , cardsCombination);  // -1 means not legal
-        // if want he want to play is not legal. Tell him.
-        if (isLegal === -1){
-            callback(-1);
-        }
-        else{
-            //debug(5);
-            updateHand(player);
-            player.broadcast.to(player.game).emit('otherTricks',result,gameInfo.dealer);
-            player.emit('otherTricks',result,gameInfo.dealer);
-            //next
-            gameInfo.dealer = ((gameInfo.dealer + 1)%4);
-            player.emit('stop');
-            player.broadcast.to(player.game).emit('stop');
-            callback(1);
-        }
-    })
-}
-
-
-function countCardsinHand(player){
-    var num =0;
-    for(var i =0;i<5;i++){
-        num += player.suit[i].length;
-    }
-    return num;
-}
-
-
-function one_round(players,gameInfo, callBack){
-    // set them all not able to submit information.
-    console.log('one_round');
-    if(gameInfo.count < 4){
-        var i = gameInfo.dealer;
-        //debug(9);
-        do_trick(players[i],gameInfo,function(result){
-            //debug(88);
-            if(result === 1){
-                //debug(3);
-                gameInfo.count++;
-                i = gameInfo.dealer;
-                players[i].emit('go');
-                players[i].broadcast.to(players[i].game).emit('stop');
-                one_round(players,gameInfo ,callBack);
-            }
-            else if(result === -1){
-                //debug(11)
-                players[i].emit('DoAgain');
-                //players[i].broadcast.to(players[i].game).emit('stop');
-                //one_round(players,gameInfo ,callBack);
-            }
-            else{
-                debug(result);
-                debug(99);
-
-            }
-        })
-    }
-    else{
-        console.log('One loop done');
-        gameInfo.cardsLeft = countCardsinHand(players[0]); //everyone has same number of cards
-        callBack(gameInfo.cardsLeft);
-    }
-
-}
-
-function playing(players,gameInfo){
-    console.log('OK. please start your trick');
-    var done = false;
-
-    gameInfo.count = 0;
-    var i = gameInfo.dealer;
-    players[i].emit('go');
-    players[i].broadcast.to(players[i].game).emit('stop');
-    //player.broadcast.to(player.game).emit('otherTricks',result);
-    one_round(players,gameInfo,function(result){
-        if(result === 104 ){
-            //this game is done
-
-        }
-        else{
-            // go to next round
-            debug('next round');
-            playing(players,gameInfo);
-        }
-    });
-
-
-
-}
 
 function updateScore(players){
 
@@ -398,6 +340,7 @@ var game_core= function (game_instance) {
     //console.log(players)
     var gameInfo = new GameInfo();
     gameInfo.dealer = 0;  // 0 ,1, 2, 3
+    gameInfo.leader = gameInfo.dealer;
     One_game(players,gameInfo);
 
 };
@@ -462,4 +405,132 @@ if( 'undefined' != typeof global ) {
 //            sortCards(players);
 //        }
 //    },30)
+//}
+
+
+//
+//function do_trick(player, gameInfo, callback){
+//
+//    player.on('usecard', function(result) {
+//        debug('gamecore:: ' + player.userid );
+//        var cardsCombination = [];
+//        for(var i = 0; i< result.length ; i++){
+//            var temp = new Card(result[i].suit, result[i].value);
+//            cardsCombination.push(temp);
+//            console.log( ' used card ' + temp.suit + ' ' + temp.value);
+//        }
+//        //var oneCard = new Card(result.suit,parseInt(result.value));
+//
+//
+//        // Now I just made one value array;
+//
+//        //cardsCombination.push(oneCard);
+//        var isLegal = deleteHand(player , cardsCombination);  // -1 means not legal
+//        // if want he want to play is not legal. Tell him.
+//        if (isLegal === -1){
+//            callback(-1);
+//        }
+//        else{
+//            //debug(5);
+//            updateHand(player);
+//            player.broadcast.to(player.game).emit('otherTricks',result,gameInfo.dealer);
+//            player.emit('otherTricks',result,gameInfo.dealer);
+//            //next
+//            gameInfo.dealer = ((gameInfo.dealer + 1)%4);
+//            player.emit('stop');
+//            player.broadcast.to(player.game).emit('stop');
+//            callback(1);
+//        }
+//    })
+//}
+//
+//
+//function countCardsinHand(player){
+//    var num =0;
+//    for(var i =0;i<5;i++){
+//        num += player.suit[i].length;
+//    }
+//    return num;
+//}
+//
+//
+//function one_round(players,gameInfo, callBack){
+//    // set them all not able to submit information.
+//    console.log('one_round');
+//    if(gameInfo.count < 4){
+//        var i = gameInfo.dealer;
+//        //debug(9);
+//        do_trick(players[i],gameInfo,function(result){
+//            //debug(88);
+//            if(result === 1){
+//                //debug(3);
+//                gameInfo.count++;
+//                i = gameInfo.dealer;
+//                players[i].emit('go');
+//                players[i].broadcast.to(players[i].game).emit('stop');
+//                one_round(players,gameInfo ,callBack);
+//            }
+//            else if(result === -1){
+//                debug(11)
+//                players[i].emit('DoAgain');
+//                //players[i].broadcast.to(players[i].game).emit('stop');
+//                //one_round(players,gameInfo ,callBack);
+//            }
+//            else{
+//                debug(result);
+//                debug(99);
+//
+//            }
+//        })
+//    }
+//    else{
+//        console.log('One loop done');
+//        gameInfo.cardsLeft = countCardsinHand(players[0]); //everyone has same number of cards
+//        callBack(gameInfo.cardsLeft);
+//    }
+//
+//}
+//
+//function playing(players,gameInfo){
+//    console.log('OK. please start your trick');
+//    var done = false;
+//
+//    gameInfo.count = 0;
+//    var i = gameInfo.dealer;
+//    players[i].emit('go');
+//    players[i].broadcast.to(players[i].game).emit('stop');
+//    //player.broadcast.to(player.game).emit('otherTricks',result);
+//    one_round(players,gameInfo,function(result){
+//        if(result === 104 ){
+//            //this game is done
+//
+//        }
+//        else{
+//            // go to next round
+//            debug('next round');
+//            playing(players,gameInfo);
+//        }
+//    });
+//}
+
+
+
+//function sortCards(players){
+//
+//    //ALL_SUIT 'spades','hearts','diamonds','clubs','jokers'
+//    for(var k = 0 ; k <4 ;k++){
+//        for(var i=0 ; i< players[k].cards.length ; i++){
+//            for(var j =0 ; j < ALL_SUIT.length ; j++){
+//                if(ALL_SUIT[j] === players[k].cards[i].suit){
+//                    players[k].suit[j].push(players[k].cards[i]);
+//                }
+//            }
+//        }
+//        for(var i =0 ;i<ALL_SUIT.length; i++){
+//            players[k].suit[i].sort(function(a,b){return b.value - a.value });
+//        }
+//        //console.log('Hi, I am here gg');
+//        updateHand(players[k]);
+//    }
+//
 //}
