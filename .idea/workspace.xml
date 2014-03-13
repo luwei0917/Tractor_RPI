@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="4th version&#10;">
+    <list default="true" id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tractor.iws" />
@@ -64,7 +64,7 @@
       <file leaf-file-name="game.core.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="5" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.84033614" vertical-offset="0" max-vertical-offset="8250">
+            <state line="44" column="16" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.92436975" vertical-offset="0" max-vertical-offset="8250">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -589,7 +589,11 @@
       <created>1394678157936</created>
       <updated>1394678157936</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="4th version&#10;">
+      <created>1394678408790</created>
+      <updated>1394678408790</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1017,7 +1021,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.84033614" vertical-offset="0" max-vertical-offset="8250">
+        <state line="44" column="16" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.92436975" vertical-offset="0" max-vertical-offset="8250">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
