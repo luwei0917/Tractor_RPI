@@ -1,6 +1,10 @@
 //This is the baby of Wei Lu
 <<<<<<< HEAD
+<<<<<<< HEAD
 //add something
+=======
+//I want it shows in master branch.
+>>>>>>> luwei
 
 =======
 //Based on Nanyu Zeng's work
