@@ -1,4 +1,6 @@
 //This is the baby of Wei Lu
+//add something
+
 DECK_NUM = 2;
 SUIT_NUM = 4;
 VALUE_NUM = 13;
@@ -114,8 +116,9 @@ function next(deck,i,players,gameInfo){
         updateHand(players[j]);
         //sortCards(players);
         debug('Dealing Done');
+        kitty(players[gameInfo.dealer],gameInfo);
 
-        playing(players,gameInfo)
+
 
     }
 }
@@ -148,7 +151,8 @@ function sendCard(card,player,dominantRank,callback){
     //player.cards.push(card);
     updateHand(player);
     //player.emit('newcard',card);
-    var time = 0.01*1000;  // 0.01s
+    var time = 0.1*1000;
+    //var time = 0.01*1000;  // 0.01s
     var IsDominantSuit = false;
     if(card.value === dominantRank && card.suit != 'jokers'){
         player.emit('declaration');
@@ -298,6 +302,10 @@ function updateScore(players){
 function kitty(player,gameInfo){
     player.emit('kitty');
     //TODO: kitty
+
+
+
+
 }
 
 function One_game(players,gameInfo){
@@ -316,9 +324,9 @@ function One_game(players,gameInfo){
     }
 
     Dealing(players,gameInfo);
-    kitty(players[gameInfo.dealer],gameInfo);
+
     // updateScore(players);
-    //playing(players,gameInfo);
+    playing(players,gameInfo);
 }
 
 
