@@ -1,6 +1,10 @@
 //This is the baby of Wei Lu
+<<<<<<< HEAD
 //add something
 
+=======
+//Based on Nanyu Zeng's work
+>>>>>>> kitsune
 DECK_NUM = 2;
 SUIT_NUM = 4;
 VALUE_NUM = 13;
