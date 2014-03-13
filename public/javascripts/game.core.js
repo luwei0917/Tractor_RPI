@@ -1,6 +1,6 @@
 //This is the baby of Wei Lu
 //I want it shows in master branch.
-
+//version 2
 DECK_NUM = 2;
 SUIT_NUM = 4;
 VALUE_NUM = 13;
