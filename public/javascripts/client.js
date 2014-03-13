@@ -31,16 +31,8 @@ function connect_to_server ()
         //console.log(message.value);
         var num =0;
         console.log(mycards.length);
-        display_used_cards(message, num);
-//        if (mycards.length === 27){
-//            // $('#servermsg').text(mycards.valu);
-//            var ccc = '';
-//            for (var i = 0; i < 27; i++){
-//                ccc += (mycards[i].suit + ' '+ mycards[i].value + ' , ' )
-//            }
-//            $('#servermsg').text(ccc);
-//
-//        }
+        display_my_cards(mycards);
+
     })
 
 

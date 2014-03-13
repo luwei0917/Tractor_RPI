@@ -149,10 +149,16 @@ function sendCard(card,player,dominantRank,callback){
     addCard(player,card);
     //debug(card.suit + ' '+ card.value);
     //player.cards.push(card);
+<<<<<<< HEAD
     updateHand(player);
     //player.emit('newcard',card);
     var time = 0.1*1000;
     //var time = 0.01*1000;  // 0.01s
+=======
+    //updateHand(player);
+    player.emit('newcard',card);
+    var time = 0.25*1000;  // 0.01s
+>>>>>>> kitsune
     var IsDominantSuit = false;
     if(card.value === dominantRank && card.suit != 'jokers'){
         player.emit('declaration');
@@ -281,17 +287,7 @@ function deleteHand(player,cardsCombination){
 
 
 
-function updateHand(player){
-    player.cards = [];
-    for(var i = 0; i< ALL_SUIT.length; i++){
-        for(var j =0 ; j< player.suit[i].length; j++){
-            player.cards.push(player.suit[i][j])
-        }
-    }
-    //console.log(player.cards);
-    //console.log(player.suit[0]);
-    player.emit('updateHand', player.cards);
-}
+
 
 
 function updateScore(players){
