@@ -1,5 +1,5 @@
 //This is the baby of Wei Lu
-//add something
+//I want it shows in master branch.
 
 DECK_NUM = 2;
 SUIT_NUM = 4;
