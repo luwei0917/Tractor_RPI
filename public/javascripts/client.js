@@ -25,36 +25,29 @@ function connect_to_server ()
         $('#servermsg').text('server said ' + message);
     })
 
-    socket.on('newcard', function(message) {
+    socket.on('newcard', function(message, pos) {
         mycards.push(message);
         $('#servermsg').text('I got card ' + message.suit+' ' + message.value);
         //console.log(message.value);
         var num =0;
         console.log(mycards.length);
-        display_used_cards(message, num);
-//        if (mycards.length === 27){
-//            // $('#servermsg').text(mycards.valu);
-//            var ccc = '';
-//            for (var i = 0; i < 27; i++){
-//                ccc += (mycards[i].suit + ' '+ mycards[i].value + ' , ' )
-//            }
-//            $('#servermsg').text(ccc);
-//
+        console.log((pos +1 ) +  ' !');
+        display_my_cards(mycards, pos);
+
+    })
+
+
+//    socket.on('updateHand', function(message) {
+//        console.log(message.length);
+//        console.log(message);
+//        var ccc = 'This Round  ';
+//        for(var i=0;i<message.length; i++){
+//            ccc += (message[i].suit + ' '+ message[i].value + ' , ' )
 //        }
-    })
-
-
-    socket.on('updateHand', function(message) {
-        console.log(message.length);
-        console.log(message);
-        var ccc = 'This Round  ';
-        for(var i=0;i<message.length; i++){
-            ccc += (message[i].suit + ' '+ message[i].value + ' , ' )
-        }
-        //$('#servermsg').text(ccc);
-        $('#servermsg').myfunction(message,ccc);
-        //socket.removeListener('updateHand');
-    })
+//        //$('#servermsg').text(ccc);
+//        $('#servermsg').myfunction(message,ccc);
+//        //socket.removeListener('updateHand');
+//    })
 
     socket.on('otherTricks', function(message,num) {
         $('#trick').append('<p>' +'player '+num +' plays '+ '</p>');
@@ -77,6 +70,7 @@ function connect_to_server ()
         $('#usedcardDiv2').empty();
         $('#usedcardDiv3').empty();
         $('#usedcardDiv4').empty();
+        $("#overlay").empty();
     })
     socket.on('DoAgain', function() {
         $('#gogogo').text('Not legal, try again');

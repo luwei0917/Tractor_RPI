@@ -112,7 +112,11 @@ function next(deck,i,players,gameInfo){
         for(var i =0;i<deck.length;i++){
             addCard(players[j],deck[i]);
         }
-        updateHand(players[j]);
+
+        for(var i =0 ;i<4 ;i++){
+            updateHand(players[i]);
+        }
+        //updateHand(players[j]);
         //sortCards(players);
         debug('Dealing Done');
         kitty(players[gameInfo.dealer],gameInfo);
@@ -122,7 +126,9 @@ function next(deck,i,players,gameInfo){
     }
 }
 
-function addCard(player,card){
+function addCard(player,card,callback){
+    var num = 0;
+    var done = false;
     for(var i =0 ;i< ALL_SUIT.length;i++){
         if(ALL_SUIT[i] === card.suit){
             player.suit[i].push(card);
@@ -140,18 +146,39 @@ function addCard(player,card){
                     return b.value - a.value
                 }
             });
+            var temp = find(player,card);
+            num += temp[1];
+            done = true;
+
+        }
+        else{
+            if(done === false){
+                num += player.suit[i].length;
+            }
         }
     }
+    callback(num);
+
 }
 
 function sendCard(card,player,dominantRank,callback){
-    addCard(player,card);
+    addCard(player,card,function(result){
+        player.emit('newcard',card,result);
+        debug('now '+result);
+    });
+
     //debug(card.suit + ' '+ card.value);
     //player.cards.push(card);
+<<<<<<< HEAD
     updateHand(player);
     //player.emit('newcard',card);
     var time = 0.1*1000;
     //var time = 0.01*1000;  // 0.01s
+=======
+    //updateHand(player);
+
+    var time = 0.25*1000;  // 0.01s
+>>>>>>> kitsune
     var IsDominantSuit = false;
     if(card.value === dominantRank && card.suit != 'jokers'){
         player.emit('declaration');
@@ -280,6 +307,7 @@ function deleteHand(player,cardsCombination){
 
 
 
+
 function updateHand(player){
     player.cards = [];
     for(var i = 0; i< ALL_SUIT.length; i++){
@@ -291,6 +319,7 @@ function updateHand(player){
     //console.log(player.suit[0]);
     player.emit('updateHand', player.cards);
 }
+
 
 
 function updateScore(players){
