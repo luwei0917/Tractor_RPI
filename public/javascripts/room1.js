@@ -34,7 +34,6 @@ function parse_cards(context, clas) {
     res = [];
     for (var i = 0; i < context.length; i++) {
         var $temp = $('<div>', {id: i.toString(), class: clas});
-        $temp.addClass('animated slideInRight')
 
         if (context[i].suit === "jokers") {
             if (context[i].value === 1) {
@@ -76,25 +75,19 @@ function display_one_more_card(acard, idnum, clas, pos)
     {
         $('.cards:nth-child(' +(pos).toString() + ')').after(parsed);
     }
-    //$('#overlay').append(parsed);
-    //$('#overlay:nth-child(' + (0).toString +')').after(parsed);
-    //else
-        //$('#overlay').children(':eq(' +(1).toString() + ')').after(parsed);
-//    console.log( $('#overlay').children(':eq(' +(pos).toString() + ')'));
-
-
-    $('.cards').click(function(){
+    $('#'+idnum.toString()).click(function(){
         //alert(this.id);
         if ($(this).hasClass('select')){
-            chosen[this.id] = 0;
+            //chosen[this.id] = 0;
             $(this).animate({top:'+=20px'},1);
             $(this).removeClass('select')
         }else{
-            chosen[this.id] = 1;
+            //chosen[this.id] = 1;
             $(this).animate({top:'-=20px'},1);
             $(this).addClass('select')
         }
     });
+
 }
 
 function parse_one_card(acard, idnum, clas) {
