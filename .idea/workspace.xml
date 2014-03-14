@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="4th version&#10;">
-=======
-    <list default="true" id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="">
->>>>>>> kitsune
+    <list default="true" id="7be127d3-0159-4d6c-9df4-5ae993dc4ee7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/game.core.js" afterPath="$PROJECT_DIR$/public/javascripts/game.core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tractor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,9 +13,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
+    <option name="PATCH_PATH" value="" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -29,82 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="71" column="21" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1365">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="room1.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/room1.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="17" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="660">
-=======
-            <state line="71" column="21" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
->>>>>>> kitsune
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="35" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1920">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.styl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="42" column="0" selection-start="582" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="1260">
-=======
-            <state line="42" column="0" selection-start="582" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
->>>>>>> kitsune
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="game.core.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state line="1" column="15" selection-start="44" selection-end="44" vertical-scroll-proportion="0.020297699" vertical-offset="0" max-vertical-offset="8250">
-=======
-            <state line="6" column="52" selection-start="168" selection-end="168" vertical-scroll-proportion="0.11968085" vertical-offset="0" max-vertical-offset="8145">
->>>>>>> kitsune
-=======
-            <state line="1" column="35" selection-start="64" selection-end="64" vertical-scroll-proportion="0.021008404" vertical-offset="0" max-vertical-offset="8250">
->>>>>>> luwei
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="23" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="495">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="room1.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/room1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="26" selection-start="158" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1275">
+            <state line="12" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="0.2393617" vertical-offset="0" max-vertical-offset="8235">
               <folding />
             </state>
           </provider>
@@ -118,60 +43,22 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="wei lu &lt;luwei0917@gmail.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubProjectSettings">
-    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="luwei0917" />
-    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="Tractor_RPI" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/game_core.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/game.server.js" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/routes/room.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/debug.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/debug.html" />
-        <option value="$PROJECT_DIR$/public/javascripts/room1.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.styl" />
-        <option value="$PROJECT_DIR$/public/javascripts/test.js" />
-        <option value="$PROJECT_DIR$/views/room1.jade" />
-        <option value="$PROJECT_DIR$/public/javascripts/index.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/client.js" />
         <option value="$PROJECT_DIR$/public/javascripts/game.core.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2135" />
-    <option name="y" value="190" />
-    <option name="width" value="1166" />
+    <option name="x" value="4" />
+    <option name="y" value="26" />
+    <option name="width" value="1428" />
     <option name="height" value="870" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>CoffeeScript</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -197,6 +84,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,392 +103,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tractor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tractor_RPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tractor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tractor_RPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="JavaScript.Libraries" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistory" value="" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="41" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="50" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="52" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="505" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="49" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="50" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="51" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="498" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="OPEN_URL_DIALOG">
-      <recent name="https://github.com/luwei0917/Tractor_RPI" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Node.js.app.js">
-    <configuration default="false" name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="/usr/local/bin/node" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/public/javascripts">
-      <browser start="false" url="" with-js-debugger="false" />
-      <RunnerSettings RunnerId="NodeJS.run" />
-      <ConfigurationWrapper RunnerId="NodeJS.run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="debug.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="/usr/local/bin/node" path-to-js-file="debug.html" working-dir="$PROJECT_DIR$/public/javascripts">
-      <browser start="false" url="" with-js-debugger="false" />
-      <RunnerSettings RunnerId="NodeJS.run" />
-      <ConfigurationWrapper RunnerId="NodeJS.run" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="name" value="Dart" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <browser start="false" url="" with-js-debugger="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.test.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.debug.js" />
     </list>
-    <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.test.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.debug.js" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fcb52330-a70b-4c70-b5f5-d2cfeeaea6cf" name="Default" comment="" />
-      <created>1391968120762</created>
-      <updated>1391968120762</updated>
+      <changelist id="7be127d3-0159-4d6c-9df4-5ae993dc4ee7" name="Default" comment="" />
+      <created>1394678869062</created>
+      <updated>1394678869062</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial commit&#10;">
-      <created>1392437129089</created>
-      <updated>1392437129089</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Initial commit&#10;">
-      <created>1392441919992</created>
-      <updated>1392441919992</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Initial commit&#10;">
-      <created>1392444336854</created>
-      <updated>1392444336854</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Initial commit&#10;">
-      <created>1393017724277</created>
-      <updated>1393017724277</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Initial commit&#10;">
-      <created>1393018934866</created>
-      <updated>1393018934866</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Initial commit&#10;">
-      <created>1393022325836</created>
-      <updated>1393022325836</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Initial commit&#10;">
-      <created>1393446086185</created>
-      <updated>1393446086185</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Initial commit&#10;">
-      <created>1393446317224</created>
-      <updated>1393446317224</updated>
-    </task>
-    <task id="LOCAL-00009" summary="1 million th commit">
-      <created>1393446768379</created>
-      <updated>1393446768379</updated>
-    </task>
-    <task id="LOCAL-00010" summary="1 million th commit&#10;">
-      <created>1393446786715</created>
-      <updated>1393446786715</updated>
-    </task>
-    <task id="LOCAL-00011" summary="2nd version">
-      <created>1393446926241</created>
-      <updated>1393446926241</updated>
-    </task>
-    <task id="LOCAL-00012" summary="2nd version&#10;">
-      <created>1393446976796</created>
-      <updated>1393446976796</updated>
-    </task>
-    <task id="LOCAL-00013" summary="2nd version&#10;">
-      <created>1393447050030</created>
-      <updated>1393447050030</updated>
-    </task>
-    <task id="LOCAL-00014" summary="2nd version&#10;">
-      <created>1393447082958</created>
-      <updated>1393447082958</updated>
-    </task>
-    <task id="LOCAL-00015" summary="2nd version&#10;">
-      <created>1393639767931</created>
-      <updated>1393639767931</updated>
-    </task>
-    <task id="LOCAL-00016" summary="2nd version&#10;">
-      <created>1393649665716</created>
-      <updated>1393649665716</updated>
-    </task>
-    <task id="LOCAL-00017" summary="3rd version&#10;">
-      <created>1393650215478</created>
-      <updated>1393650215478</updated>
-    </task>
-    <task id="LOCAL-00018" summary="3rd version&#10;">
-      <created>1393722180912</created>
-      <updated>1393722180912</updated>
-    </task>
-    <task id="LOCAL-00019" summary="3rd version&#10;">
-      <created>1393724263651</created>
-      <updated>1393724263651</updated>
-    </task>
-    <task id="LOCAL-00020" summary="3rd version&#10;">
-      <created>1393724466727</created>
-      <updated>1393724466727</updated>
-    </task>
-    <task id="LOCAL-00021" summary="3rd version&#10;">
-      <created>1393725636982</created>
-      <updated>1393725636982</updated>
-    </task>
-    <task id="LOCAL-00022" summary="3rd version&#10;">
-      <created>1393730124217</created>
-      <updated>1393730124217</updated>
-    </task>
-    <task id="LOCAL-00023" summary="3rd version&#10;">
-      <created>1393730776112</created>
-      <updated>1393730776112</updated>
-    </task>
-    <task id="LOCAL-00024" summary="3rd version&#10;">
-      <created>1393974577333</created>
-      <updated>1393974577333</updated>
-    </task>
-    <task id="LOCAL-00025" summary="3rd version&#10;">
-      <created>1393974753949</created>
-      <updated>1393974753949</updated>
-    </task>
-    <task id="LOCAL-00026" summary="3rd version&#10;">
-      <created>1393974892826</created>
-      <updated>1393974892826</updated>
-    </task>
-    <task id="LOCAL-00027" summary="3rd version&#10;">
-      <created>1393974921738</created>
-      <updated>1393974921738</updated>
-    </task>
-    <task id="LOCAL-00028" summary="3rd version&#10;">
-      <created>1393974932074</created>
-      <updated>1393974932074</updated>
-    </task>
-    <task id="LOCAL-00029" summary="3rd version&#10;">
-      <created>1393975270424</created>
-      <updated>1393975270424</updated>
-    </task>
-    <task id="LOCAL-00030" summary="3rd version&#10;">
-      <created>1393975326529</created>
-      <updated>1393975326529</updated>
-    </task>
-    <task id="LOCAL-00031" summary="3rd version&#10;">
-      <created>1393975466283</created>
-      <updated>1393975466283</updated>
-    </task>
-    <task id="LOCAL-00032" summary="3rd version&#10;">
-      <created>1393978162550</created>
-      <updated>1393978162550</updated>
-    </task>
-    <task id="LOCAL-00033" summary="3rd version&#10;">
-      <created>1393979719172</created>
-      <updated>1393979719172</updated>
-    </task>
-    <task id="LOCAL-00034" summary="3rd version&#10;">
-      <created>1393988073479</created>
-      <updated>1393988073479</updated>
-    </task>
-    <task id="LOCAL-00035" summary="3rd version&#10;">
-      <created>1393988260089</created>
-      <updated>1393988260089</updated>
-    </task>
-    <task id="LOCAL-00036" summary="3rd version&#10;">
-      <created>1393988912838</created>
-      <updated>1393988912838</updated>
-    </task>
-    <task id="LOCAL-00037" summary="3rd version&#10;">
-      <created>1393988920580</created>
-      <updated>1393988920580</updated>
-    </task>
-    <task id="LOCAL-00038" summary="3rd version&#10;">
-      <created>1393989830610</created>
-      <updated>1393989830610</updated>
-    </task>
-    <task id="LOCAL-00039" summary="3rd version&#10;">
-      <created>1393990438185</created>
-      <updated>1393990438185</updated>
-    </task>
-    <task id="LOCAL-00040" summary="3rd version&#10;">
-      <created>1394330146532</created>
-      <updated>1394330146532</updated>
-    </task>
-    <task id="LOCAL-00041" summary="3rd version&#10;">
-      <created>1394333590408</created>
-      <updated>1394333590408</updated>
-    </task>
-    <task id="LOCAL-00042" summary="3rd version&#10;">
-      <created>1394334714379</created>
-      <updated>1394334714379</updated>
-    </task>
-    <task id="LOCAL-00043" summary="3rd version&#10;">
-      <created>1394336452650</created>
-      <updated>1394336452650</updated>
-    </task>
-    <task id="LOCAL-00044" summary="3rd version&#10;">
-      <created>1394339309743</created>
-      <updated>1394339309743</updated>
-    </task>
-    <task id="LOCAL-00045" summary="3rd version&#10;">
-      <created>1394344904955</created>
-      <updated>1394344904955</updated>
-    </task>
-    <task id="LOCAL-00046" summary="3rd version&#10;">
-      <created>1394346339603</created>
-      <updated>1394346339603</updated>
-    </task>
-    <task id="LOCAL-00047" summary="3rd version&#10;">
-      <created>1394346565192</created>
-      <updated>1394346565192</updated>
-    </task>
-    <task id="LOCAL-00048" summary="3rd version&#10;">
-      <created>1394347188995</created>
-      <updated>1394347188995</updated>
-    </task>
-    <task id="LOCAL-00049" summary="3rd version&#10;">
-      <created>1394347581559</created>
-      <updated>1394347581559</updated>
-    </task>
-    <task id="LOCAL-00050" summary="4th version&#10;">
-      <created>1394347598199</created>
-      <updated>1394347598199</updated>
-    </task>
-    <task id="LOCAL-00051" summary="4th version&#10;">
-      <created>1394347742900</created>
-      <updated>1394347742900</updated>
-    </task>
-    <task id="LOCAL-00052" summary="4th version&#10;">
-      <created>1394393861399</created>
-      <updated>1394393861400</updated>
-    </task>
-    <task id="LOCAL-00053" summary="4th version&#10;">
-      <created>1394394123115</created>
-      <updated>1394394123115</updated>
-    </task>
-    <task id="LOCAL-00054" summary="4th version&#10;">
-      <created>1394412354034</created>
-      <updated>1394412354034</updated>
-    </task>
-    <task id="LOCAL-00055" summary="4th version&#10;">
-      <created>1394677362319</created>
-      <updated>1394677362320</updated>
-    </task>
-    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="2135" y="190" width="1166" height="870" extended-state="0" />
+    <frame x="4" y="26" width="1428" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277635" sideWeight="0.4992764" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24891461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2295989" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39717224" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277635" sideWeight="0.5007236" order="9" side_tool="true" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277635" sideWeight="0.4992764" order="2" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32709113" sideWeight="0.4992764" order="2" side_tool="false" content_ui="tabs" />
->>>>>>> kitsune
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.75064266" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -609,26 +184,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277635" sideWeight="0.4992764" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39717224" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5007236" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.75073314" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24891461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23068051" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277635" sideWeight="0.4992764" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USERS">
@@ -639,356 +194,18 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Initial commit&#10;" />
-    <MESSAGE value="1 million th commit" />
-    <MESSAGE value="1 million th commit&#10;" />
-    <MESSAGE value="2nd version" />
-    <MESSAGE value="2nd version&#10;" />
-    <MESSAGE value="3rd version&#10;" />
-    <MESSAGE value="4th version&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="4th version&#10;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="6" />
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="21" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="35" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="582" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="0" selection-start="6706" selection-end="6706" vertical-scroll-proportion="0.0" vertical-offset="3793" max-vertical-offset="8130">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="23" column="1" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="5685">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-=======
-        <state line="16" column="23" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="495">
+        <state line="12" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="0.2393617" vertical-offset="0" max-vertical-offset="8235">
           <folding />
->>>>>>> kitsune
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/room1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="158" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="29" selection-start="2456" selection-end="2456" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="1695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="37" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1140" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="19" selection-start="675" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="179" column="20" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0" vertical-offset="2346" max-vertical-offset="4935">
-=======
-        <state line="23" column="1" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="5685">
->>>>>>> kitsune
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/room1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="27" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1980">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="23" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="1335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="20" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0" vertical-offset="2346" max-vertical-offset="4935">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="554" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="282" column="5" selection-start="8425" selection-end="8425" vertical-scroll-proportion="0.0" vertical-offset="3900" max-vertical-offset="5235">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-=======
-        <state line="23" column="6" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1335">
-          <folding />
->>>>>>> kitsune
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="5" selection-start="8425" selection-end="8425" vertical-scroll-proportion="0.0" vertical-offset="3900" max-vertical-offset="5235">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="30" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="6" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1185">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="31" selection-start="3242" selection-end="3242" vertical-scroll-proportion="0.0" vertical-offset="1777" max-vertical-offset="3210">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-<<<<<<< HEAD
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
-          <folding />
-=======
->>>>>>> kitsune
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="2919" selection-end="2919" vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="1965">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-<<<<<<< HEAD
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
-          <folding />
-=======
->>>>>>> kitsune
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="52" selection-start="4565" selection-end="4565" vertical-scroll-proportion="0.0" vertical-offset="1980" max-vertical-offset="20190">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-<<<<<<< HEAD
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1350">
-          <folding />
-=======
->>>>>>> kitsune
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/WebStorm7/extLibs/nodejs-v0.10.25-src/core-modules-sources/lib/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4245" />
-      </provider>
-    </entry>
-    <entry file="https://github.com/luwei0917/Tractor_RPI">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/poker.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="66" selection-start="108" selection-end="108" vertical-scroll-proportion="0.03267974" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/debug.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.08534851" vertical-offset="0" max-vertical-offset="703" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/room1.js">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="36" column="17" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="660">
-=======
-        <state line="4" column="26" selection-start="158" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
->>>>>>> kitsune
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="21" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="35" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="582" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="1260">
-<<<<<<< HEAD
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="35" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.0" vertical-offset="870" max-vertical-offset="1920">
-=======
->>>>>>> kitsune
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/game.core.js">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state line="1" column="15" selection-start="44" selection-end="44" vertical-scroll-proportion="0.020297699" vertical-offset="0" max-vertical-offset="8250">
-=======
-        <state line="6" column="52" selection-start="168" selection-end="168" vertical-scroll-proportion="0.11968085" vertical-offset="0" max-vertical-offset="8145">
->>>>>>> kitsune
-=======
-        <state line="1" column="35" selection-start="64" selection-end="64" vertical-scroll-proportion="0.021008404" vertical-offset="0" max-vertical-offset="8250">
->>>>>>> luwei
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
