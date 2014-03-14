@@ -1,5 +1,10 @@
 //This is the baby of Wei Lu
+<<<<<<< HEAD
 
+=======
+//I want it shows in master branch.
+//version 2
+>>>>>>> FETCH_HEAD
 DECK_NUM = 2;
 SUIT_NUM = 4;
 VALUE_NUM = 13;

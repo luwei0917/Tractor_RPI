@@ -108,7 +108,11 @@ function parse_cards(context, clas) {
     connect_to_server();
 });
 =======
+<<<<<<< HEAD
 function display_my_cards(context, pos) {
+=======
+function display_my_cards(context) {
+>>>>>>> FETCH_HEAD
     var clas = 'cards';
     idnum = context.length - 1;
     display_one_more_card(context[idnum], idnum, clas, pos);
