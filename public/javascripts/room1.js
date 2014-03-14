@@ -57,16 +57,31 @@ function parse_cards(context, clas) {
     return res;
 }
 
-function display_my_cards(context) {
+function display_my_cards(context, pos) {
     var clas = 'cards';
     idnum = context.length - 1;
-    display_one_more_card(context[idnum], idnum, clas);
+    display_one_more_card(context[idnum], idnum, clas, pos);
 }
 
-function display_one_more_card(acard, idnum, clas)
+function display_one_more_card(acard, idnum, clas, pos)
 {
     parsed = parse_one_card(acard, idnum, clas);
-    $('#overlay').append(parsed);
+    if (pos === 0 && idnum === 0)
+        $('#overlay').append(parsed);
+    else if (pos === 0)
+    {
+        $('.cards:nth-child(' +(1).toString() + ')').before(parsed);
+    }
+    else
+    {
+        $('.cards:nth-child(' +(pos).toString() + ')').after(parsed);
+    }
+    //$('#overlay').append(parsed);
+    //$('#overlay:nth-child(' + (0).toString +')').after(parsed);
+    //else
+        //$('#overlay').children(':eq(' +(1).toString() + ')').after(parsed);
+//    console.log( $('#overlay').children(':eq(' +(pos).toString() + ')'));
+
 
     $('.cards').click(function(){
         //alert(this.id);

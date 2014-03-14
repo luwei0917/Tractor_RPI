@@ -112,7 +112,11 @@ function next(deck,i,players,gameInfo){
         for(var i =0;i<deck.length;i++){
             addCard(players[j],deck[i]);
         }
-        updateHand(players[j]);
+
+        for(var i =0 ;i<4 ;i++){
+            updateHand(players[i]);
+        }
+        //updateHand(players[j]);
         //sortCards(players);
         debug('Dealing Done');
 
@@ -121,7 +125,9 @@ function next(deck,i,players,gameInfo){
     }
 }
 
-function addCard(player,card){
+function addCard(player,card,callback){
+    var num = 0;
+    var done = false;
     for(var i =0 ;i< ALL_SUIT.length;i++){
         if(ALL_SUIT[i] === card.suit){
             player.suit[i].push(card);
@@ -139,16 +145,31 @@ function addCard(player,card){
                     return b.value - a.value
                 }
             });
+            var temp = find(player,card);
+            num += temp[1];
+            done = true;
+
+        }
+        else{
+            if(done === false){
+                num += player.suit[i].length;
+            }
         }
     }
+    callback(num);
+
 }
 
 function sendCard(card,player,dominantRank,callback){
-    addCard(player,card);
+    addCard(player,card,function(result){
+        player.emit('newcard',card,result);
+        debug('now '+result);
+    });
+
     //debug(card.suit + ' '+ card.value);
     //player.cards.push(card);
     //updateHand(player);
-    player.emit('newcard',card);
+
     var time = 0.25*1000;  // 0.01s
     var IsDominantSuit = false;
     if(card.value === dominantRank && card.suit != 'jokers'){
@@ -278,6 +299,18 @@ function deleteHand(player,cardsCombination){
 
 
 
+
+function updateHand(player){
+    player.cards = [];
+    for(var i = 0; i< ALL_SUIT.length; i++){
+        for(var j =0 ; j< player.suit[i].length; j++){
+            player.cards.push(player.suit[i][j])
+        }
+    }
+    //console.log(player.cards);
+    //console.log(player.suit[0]);
+    player.emit('updateHand', player.cards);
+}
 
 
 
